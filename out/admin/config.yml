@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: your-github-username/your-repo-name
+  name: git-gateway
   branch: main
 
 local_backend: true

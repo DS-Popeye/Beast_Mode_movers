@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: DS-Popeye/Beast_Mode_movers
+  name: git-gateway
   branch: main
 
 local_backend: true
