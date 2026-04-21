@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-github-username/your-repo-name
+  repo: DS-Popeye/Beast_Mode_movers
   branch: main
 
 local_backend: true
