@@ -40,8 +40,14 @@
     <script type="module" src="/src/main.tsx"></script>
     <script>
       if (window.netlifyIdentity) {
+        var isIdentityCallback =
+          window.location.hash.indexOf("invite_token=") !== -1 ||
+          window.location.hash.indexOf("recovery_token=") !== -1;
+
         window.netlifyIdentity.on("login", () => {
-          window.location.href = "/admin/";
+          if (isIdentityCallback) {
+            window.location.href = "/admin/";
+          }
         });
       }
     </script>
