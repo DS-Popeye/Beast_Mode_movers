@@ -1,50 +1,22 @@
-import { useState } from 'react';
+import testimonialsContent from '../../../content/testimonials.json';
 
-const reviews = [
-  {
-    name: 'James F.',
-    location: 'Melbourne, FL',
-    stars: 5,
-    text: 'Incredible team. They moved my piano and a hot tub on the same day. No damage, no delays. These guys are the real deal. Beast Mode Movers earned every single star.',
-    role: 'Homeowner',
-    initials: 'JF',
-  },
-  {
-    name: 'Maria L.',
-    location: 'Titusville, FL',
-    stars: 5,
-    text: "Fast, careful, and professional. My family's move from Titusville to Rockledge went completely smoothly. They wrapped everything beautifully and nothing was scratched.",
-    role: 'Residential Client',
-    initials: 'ML',
-  },
-  {
-    name: 'Derek R.',
-    location: 'Rockledge, FL',
-    stars: 5,
-    text: 'I was skeptical at first, but Beast Mode Movers exceeded every expectation. Our entire office in Rockledge was fully moved and set up in a single day. Unreal.',
-    role: 'Business Owner',
-    initials: 'DR',
-  },
-  {
-    name: 'Amy T.',
-    location: 'Palm Bay, FL',
-    stars: 5,
-    text: 'They packed everything themselves and not one item was damaged. The care and efficiency they brought to our residential move was outstanding. Highly recommend.',
-    role: 'Homeowner',
-    initials: 'AT',
-  },
-  {
-    name: 'Carlos M.',
-    location: 'Cocoa Beach, FL',
-    stars: 5,
-    text: 'Best movers in Brevard County, period. On time, professional, and incredibly strong. They handled our oversized furniture like it was nothing. Will use again.',
-    role: 'Repeat Client',
-    initials: 'CM',
-  },
-];
+type Testimonial = {
+  id: string;
+  name: string;
+  location: string;
+  role?: string;
+  rating: number;
+  quote: string;
+  initials?: string;
+  featured?: boolean;
+  image?: string;
+};
+
+const testimonials = testimonialsContent.testimonials as Testimonial[];
 
 export default function Testimonials() {
-  const [active, setActive] = useState(0);
+  const featuredIndex = testimonials.findIndex((r) => r.featured);
+  const activeIndex = featuredIndex >= 0 ? featuredIndex : 0;
 
   return (
     <section id="reviews" className="py-28 bg-[#0f0f0f] overflow-hidden">
@@ -72,15 +44,15 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Cards — all 5 displayed */}
+        {/* Cards - all testimonials displayed */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
-          {reviews.slice(0, 3).map((r, i) => (
-            <TestimonialCard key={r.name} r={r} isActive={i === active % 3} onClick={() => setActive(i)} />
+          {testimonials.slice(0, 3).map((r, i) => (
+            <TestimonialCard key={r.id || r.name} r={r} isActive={i === activeIndex} />
           ))}
         </div>
         <div className="grid md:grid-cols-2 gap-5">
-          {reviews.slice(3, 5).map((r, i) => (
-            <TestimonialCard key={r.name} r={r} isActive={false} onClick={() => {}} />
+          {testimonials.slice(3).map((r, i) => (
+            <TestimonialCard key={r.id || r.name} r={r} isActive={i + 3 === activeIndex} />
           ))}
         </div>
 
@@ -88,13 +60,13 @@ export default function Testimonials() {
         <div className="mt-14 border border-[#70DC28]/20 rounded-xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 bg-[#70DC28]/5">
           <div>
             <p className="text-white font-bold text-lg mb-1">Join hundreds of satisfied Florida customers</p>
-            <p className="text-white/45 text-sm">Get your free no-obligation moving quote today — fast response, zero pressure.</p>
+            <p className="text-white/45 text-sm">Get your free no-obligation moving quote today &mdash; fast response, zero pressure.</p>
           </div>
           <a
             href="#contact"
             className="bg-[#70DC28] text-[#0f0f0f] px-8 py-3.5 rounded-md font-black text-sm whitespace-nowrap hover:bg-[#58C016] transition-colors cursor-pointer flex-shrink-0"
           >
-            Get a Free Quote →
+            Get a Free Quote &rarr;
           </a>
         </div>
       </div>
@@ -102,7 +74,9 @@ export default function Testimonials() {
   );
 }
 
-function TestimonialCard({ r, isActive, onClick }: { r: typeof reviews[0]; isActive: boolean; onClick: () => void }) {
+function TestimonialCard({ r, isActive }: { r: Testimonial; isActive: boolean }) {
+  const initials = r.initials || r.name.split(' ').map((part) => part[0]).join('').slice(0, 2);
+
   return (
     <div
       className={`p-7 rounded-xl border transition-all cursor-pointer ${
@@ -110,11 +84,10 @@ function TestimonialCard({ r, isActive, onClick }: { r: typeof reviews[0]; isAct
           ? 'bg-[#70DC28] border-[#70DC28]'
           : 'bg-white/4 border-white/8 hover:border-white/20 hover:bg-white/6'
       }`}
-      onClick={onClick}
     >
       {/* Stars */}
       <div className="flex gap-1 mb-5">
-        {Array.from({ length: r.stars }).map((_, si) => (
+        {Array.from({ length: r.rating }).map((_, si) => (
           <div key={si} className="w-4 h-4 flex items-center justify-center">
             <i className={`ri-star-fill text-sm ${isActive ? 'text-[#0f0f0f]' : 'text-[#70DC28]'}`}></i>
           </div>
@@ -127,20 +100,26 @@ function TestimonialCard({ r, isActive, onClick }: { r: typeof reviews[0]; isAct
       </div>
 
       <p className={`text-sm leading-relaxed mb-6 ${isActive ? 'text-[#0f0f0f]' : 'text-white/70'}`}>
-        {r.text}
+        {r.quote}
       </p>
 
       <div className="flex items-center gap-3">
         <div
-          className={`w-10 h-10 rounded-full flex items-center justify-center font-black text-sm flex-shrink-0 ${
+          className={`w-10 h-10 rounded-full flex items-center justify-center font-black text-sm flex-shrink-0 overflow-hidden ${
             isActive ? 'bg-[#0f0f0f] text-[#70DC28]' : 'bg-white/10 text-white'
           }`}
         >
-          {r.initials}
+          {r.image ? (
+            <img src={r.image} alt={r.name} className="w-full h-full rounded-full object-cover" />
+          ) : (
+            initials
+          )}
         </div>
         <div>
           <p className={`font-bold text-sm ${isActive ? 'text-[#0f0f0f]' : 'text-white'}`}>{r.name}</p>
-          <p className={`text-xs ${isActive ? 'text-[#0f0f0f]/55' : 'text-white/35'}`}>{r.location} · {r.role}</p>
+          <p className={`text-xs ${isActive ? 'text-[#0f0f0f]/55' : 'text-white/35'}`}>
+            {r.location}{r.role ? <>{' '}&middot;{' '}{r.role}</> : ''}
+          </p>
         </div>
       </div>
     </div>

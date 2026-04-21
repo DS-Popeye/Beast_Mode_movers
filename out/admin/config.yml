@@ -1,0 +1,33 @@
+backend:
+  name: github
+  repo: your-github-username/your-repo-name
+  branch: main
+
+local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - name: "testimonials"
+        label: "Testimonials"
+        file: "src/content/testimonials.json"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{fields.name}} - {{fields.location}}"
+            allow_add: true
+            fields:
+              - { label: "ID", name: "id", widget: "string", required: false, hint: "Unique ID such as james-f. If left blank, add one before publishing." }
+              - { label: "Name", name: "name", widget: "string", required: true }
+              - { label: "Location", name: "location", widget: "string", required: true }
+              - { label: "Role", name: "role", widget: "string", required: false }
+              - { label: "Rating", name: "rating", widget: "number", required: true, min: 1, max: 5, value_type: "int" }
+              - { label: "Quote", name: "quote", widget: "text", required: true }
+              - { label: "Initials", name: "initials", widget: "string", required: false }
+              - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
