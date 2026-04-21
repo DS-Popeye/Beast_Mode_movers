@@ -1,59 +1,70 @@
 {
   "testimonials": [
     {
-      "id": "james-f",
       "name": "James F.",
+      "featured": true,
+      "initials": "JF",
       "location": "Melbourne, FL",
       "role": "Homeowner",
-      "rating": 5,
+      "id": "james-f",
+      "image": "",
       "quote": "Incredible team. They moved my piano and a hot tub on the same day. No damage, no delays. These guys are the real deal. Beast Mode Movers earned every single star.",
-      "initials": "JF",
-      "featured": true,
-      "image": ""
+      "rating": 5
     },
     {
-      "id": "maria-l",
       "name": "Maria L.",
+      "featured": false,
+      "initials": "ML",
       "location": "Titusville, FL",
       "role": "Residential Client",
-      "rating": 5,
+      "id": "maria-l",
+      "image": "",
       "quote": "Fast, careful, and professional. My family's move from Titusville to Rockledge went completely smoothly. They wrapped everything beautifully and nothing was scratched.",
-      "initials": "ML",
-      "featured": false,
-      "image": ""
+      "rating": 5
     },
     {
-      "id": "derek-r",
       "name": "Derek R.",
+      "featured": false,
+      "initials": "DR",
       "location": "Rockledge, FL",
       "role": "Business Owner",
-      "rating": 5,
+      "id": "derek-r",
+      "image": "",
       "quote": "I was skeptical at first, but Beast Mode Movers exceeded every expectation. Our entire office in Rockledge was fully moved and set up in a single day. Unreal.",
-      "initials": "DR",
-      "featured": false,
-      "image": ""
+      "rating": 5
     },
     {
-      "id": "amy-t",
       "name": "Amy T.",
+      "featured": false,
+      "initials": "AT",
       "location": "Palm Bay, FL",
       "role": "Homeowner",
-      "rating": 5,
+      "id": "amy-t",
+      "image": "",
       "quote": "They packed everything themselves and not one item was damaged. The care and efficiency they brought to our residential move was outstanding. Highly recommend.",
-      "initials": "AT",
-      "featured": false,
-      "image": ""
+      "rating": 5
     },
     {
-      "id": "carlos-m",
       "name": "Carlos M.",
+      "featured": false,
+      "initials": "CM",
       "location": "Cocoa Beach, FL",
       "role": "Repeat Client",
-      "rating": 5,
+      "id": "carlos-m",
+      "image": "",
       "quote": "Best movers in Brevard County, period. On time, professional, and incredibly strong. They handled our oversized furniture like it was nothing. Will use again.",
-      "initials": "CM",
-      "featured": false,
-      "image": ""
+      "rating": 5
+    },
+    {
+      "name": "John Carter",
+      "featured": true,
+      "initials": "JC",
+      "location": "Melbourne, FL",
+      "role": "Homeowner",
+      "id": "test-review-01",
+      "image": "https://www.semiconductorreview.com/newstransfer/upload/19-wlf2w.jpg",
+      "quote": "Fast service, careful handling, and very professional team.",
+      "rating": 4
     }
   ]
 }
