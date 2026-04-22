@@ -65,6 +65,16 @@
       "image": "https://www.semiconductorreview.com/newstransfer/upload/19-wlf2w.jpg",
       "quote": "Fast service, careful handling, and very professional team.",
       "rating": 4
+    },
+    {
+      "featured": false,
+      "id": "josh-l",
+      "name": "Josh L.",
+      "location": "Tampa, FL",
+      "role": "Homeowner",
+      "rating": 4,
+      "quote": "Excellent experience, highly recommended.",
+      "initials": "JL"
     }
   ]
 }
