@@ -13,10 +13,12 @@ import LocationReviews from './components/LocationReviews';
 import LocationMap from './components/LocationMap';
 import LocationAIBlock from './components/LocationAIBlock';
 import LocationFAQ from './components/LocationFAQ';
+import SeoMeta from '../../components/SeoMeta';
 
 export default function LocationPage() {
   return (
     <main className="font-inter">
+      <SeoMeta page="locations" />
       <InnerHeader />
       <LocationHero />
       <TrustBar />

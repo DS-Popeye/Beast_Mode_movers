@@ -1,6 +1,99 @@
-import { useState, FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
+import formsContent from '../../../content/forms.json';
 
 const FORM_URL = 'https://readdy.ai/api/form/d6skihih642up23ipus0';
+
+type FormField = {
+  name: string;
+  type: 'text' | 'email' | 'date' | 'select' | 'textarea' | 'checkbox';
+  label: string;
+  required?: boolean;
+  placeholder?: string;
+  options?: string[];
+  value?: string;
+};
+
+type LeadFormContent = {
+  eyebrow?: string;
+  cta_title: string;
+  cta_description: string;
+  trust_points?: string[];
+  footer_note?: string;
+  form_title: string;
+  success_title: string;
+  success_message: string;
+  form_fields: FormField[];
+  cta_button_text: string;
+  privacy_note?: string;
+};
+
+const leadForm = formsContent.lead_form as LeadFormContent;
+
+function toOptionValue(option: string) {
+  return option.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+}
+
+function renderField(field: FormField) {
+  const baseClass = 'w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors';
+
+  if (field.type === 'checkbox') {
+    return (
+      <div key={field.name} className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          name={field.name}
+          value={field.value || 'Yes'}
+          id={field.name}
+          required={field.required}
+          className="mt-0.5 cursor-pointer"
+        />
+        <label htmlFor={field.name} className="text-sm text-neutral-600 cursor-pointer">
+          {field.label}
+        </label>
+      </div>
+    );
+  }
+
+  return (
+    <div key={field.name} className={field.type === 'textarea' ? 'sm:col-span-2' : undefined}>
+      <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
+        {field.label}{field.required ? ' *' : ''}
+      </label>
+      {field.type === 'select' ? (
+        <select
+          name={field.name}
+          required={field.required}
+          className={`${baseClass} bg-white`}
+          defaultValue=""
+        >
+          <option value="">Select {field.label.toLowerCase()}</option>
+          {(field.options || []).map((option) => (
+            <option key={option} value={toOptionValue(option)}>
+              {option}
+            </option>
+          ))}
+        </select>
+      ) : field.type === 'textarea' ? (
+        <textarea
+          name={field.name}
+          required={field.required}
+          rows={3}
+          maxLength={500}
+          placeholder={field.placeholder}
+          className={`${baseClass} resize-none`}
+        />
+      ) : (
+        <input
+          type={field.type}
+          name={field.name}
+          required={field.required}
+          placeholder={field.placeholder}
+          className={baseClass}
+        />
+      )}
+    </div>
+  );
+}
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -50,62 +143,52 @@ export default function LeadForm() {
     <section id="contact" className="py-24 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-5 gap-0 rounded-lg overflow-hidden border border-white/10">
-          {/* Left panel */}
           <div className="lg:col-span-2 bg-[#70DC28] p-10 flex flex-col justify-between">
             <div>
-              <p className="font-bebas tracking-[0.25em] text-sm text-[#1a1a1a]/50 mb-3">
-                FREE ESTIMATE
-              </p>
+              {leadForm.eyebrow && (
+                <p className="font-bebas tracking-[0.25em] text-sm text-[#1a1a1a]/50 mb-3">
+                  {leadForm.eyebrow}
+                </p>
+              )}
               <h2 className="font-bebas text-4xl lg:text-5xl text-[#1a1a1a] leading-tight mb-6">
-                GET YOUR
-                <br />
-                FREE MOVING
-                <br />
-                QUOTE
+                {leadForm.cta_title}
               </h2>
               <p className="text-[#1a1a1a]/70 text-sm leading-relaxed mb-8">
-                Tell us about your move and we&apos;ll provide a no-obligation estimate. Serving
-                Melbourne, Titusville, Rockledge &amp; all of Brevard County, FL.
+                {leadForm.cta_description}
               </p>
 
-              <ul className="flex flex-col gap-4 mb-8">
-                {[
-                  'No hidden fees',
-                  'Licensed & insured movers',
-                  'Local & long distance moves',
-                  'Packing services available',
-                  'Piano & hot tub specialists',
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <div className="w-5 h-5 flex items-center justify-center bg-[#1a1a1a] rounded-full">
-                      <i className="ri-check-line text-[#70DC28] text-xs"></i>
-                    </div>
-                    <span className="text-[#1a1a1a] text-sm font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {!!leadForm.trust_points?.length && (
+                <ul className="flex flex-col gap-4 mb-8">
+                  {leadForm.trust_points.map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <div className="w-5 h-5 flex items-center justify-center bg-[#1a1a1a] rounded-full">
+                        <i className="ri-check-line text-[#70DC28] text-xs"></i>
+                      </div>
+                      <span className="text-[#1a1a1a] text-sm font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
-            <div className="border-t border-[#1a1a1a]/20 pt-6">
-              <p className="text-[#1a1a1a]/60 text-xs">
-                Beast Mode Movers &mdash; Florida&apos;s Premier Moving Company
-                <br />
-                Brevard County, FL &bull; www.beastmodemovers.com
-              </p>
-            </div>
+            {leadForm.footer_note && (
+              <div className="border-t border-[#1a1a1a]/20 pt-6">
+                <p className="text-[#1a1a1a]/60 text-xs whitespace-pre-line">
+                  {leadForm.footer_note}
+                </p>
+              </div>
+            )}
           </div>
 
-          {/* Right form */}
           <div className="lg:col-span-3 bg-white p-10">
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-16">
                 <div className="w-16 h-16 bg-[#70DC28] rounded-full flex items-center justify-center mb-5">
                   <i className="ri-check-line text-[#1a1a1a] text-3xl"></i>
                 </div>
-                <h3 className="font-bebas text-4xl text-[#1a1a1a] mb-3">QUOTE REQUEST SENT!</h3>
+                <h3 className="font-bebas text-4xl text-[#1a1a1a] mb-3">{leadForm.success_title}</h3>
                 <p className="text-neutral-500 text-sm max-w-sm">
-                  Thank you! We&apos;ve received your moving quote request and will follow up with
-                  you shortly. Beast Mode Movers is ready to help you move.
+                  {leadForm.success_message}
                 </p>
               </div>
             ) : (
@@ -116,135 +199,11 @@ export default function LeadForm() {
                 className="flex flex-col gap-5"
               >
                 <h3 className="font-bebas text-3xl text-[#1a1a1a] mb-2">
-                  Tell Us About Your Move
+                  {leadForm.form_title}
                 </h3>
 
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="full_name"
-                      required
-                      placeholder="John Smith"
-                      className="w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="john@email.com"
-                      className="w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
-                      Moving From *
-                    </label>
-                    <input
-                      type="text"
-                      name="moving_from"
-                      required
-                      placeholder="City, FL"
-                      className="w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
-                      Moving To *
-                    </label>
-                    <input
-                      type="text"
-                      name="moving_to"
-                      required
-                      placeholder="City, FL"
-                      className="w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
-                      Preferred Move Date
-                    </label>
-                    <input
-                      type="date"
-                      name="move_date"
-                      className="w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
-                      Home Size
-                    </label>
-                    <select
-                      name="home_size"
-                      className="w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors bg-white"
-                    >
-                      <option value="">Select size</option>
-                      <option value="studio">Studio / 1 Bedroom</option>
-                      <option value="2br">2 Bedrooms</option>
-                      <option value="3br">3 Bedrooms</option>
-                      <option value="4br">4+ Bedrooms</option>
-                      <option value="office">Office / Commercial</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
-                    Service Type
-                  </label>
-                  <select
-                    name="service_type"
-                    className="w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors bg-white"
-                  >
-                    <option value="">Select service</option>
-                    <option value="local">Local Moving</option>
-                    <option value="longdistance">Long Distance Moving</option>
-                    <option value="residential">Residential Moving</option>
-                    <option value="commercial">Commercial Moving</option>
-                    <option value="packing">Packing Services</option>
-                    <option value="piano">Piano Move</option>
-                    <option value="hottub">Hot Tub / Spa Move</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-neutral-600 mb-1.5 uppercase tracking-wide">
-                    Additional Details
-                  </label>
-                  <textarea
-                    name="details"
-                    rows={3}
-                    maxLength={500}
-                    placeholder="Tell us more about your move, any specialty items, or specific requirements..."
-                    className="w-full border border-neutral-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#70DC28] transition-colors resize-none"
-                  />
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    name="packing_service"
-                    value="Yes"
-                    id="packing_check"
-                    className="mt-0.5 cursor-pointer"
-                  />
-                  <label htmlFor="packing_check" className="text-sm text-neutral-600 cursor-pointer">
-                    I&apos;m interested in packing services (we bring all materials)
-                  </label>
+                  {leadForm.form_fields.map(renderField)}
                 </div>
 
                 {error && (
@@ -256,12 +215,14 @@ export default function LeadForm() {
                   disabled={loading}
                   className="bg-[#70DC28] text-[#1a1a1a] py-4 rounded-md font-bold text-base whitespace-nowrap hover:bg-[#58C016] transition-colors cursor-pointer disabled:opacity-60"
                 >
-                  {loading ? 'Sending...' : 'Get My Free Moving Quote'}
+                  {loading ? 'Sending...' : leadForm.cta_button_text}
                 </button>
 
-                <p className="text-neutral-400 text-xs text-center">
-                  No spam. No obligation. We&apos;ll respond promptly with your free estimate.
-                </p>
+                {leadForm.privacy_note && (
+                  <p className="text-neutral-400 text-xs text-center">
+                    {leadForm.privacy_note}
+                  </p>
+                )}
               </form>
             )}
           </div>

@@ -1,0 +1,62 @@
+{
+  "home": {
+    "seo_title": "Beast Mode Movers - Your Trusted Local Movers",
+    "seo_description": "Best moving services for your home or office. Let us handle your move with care and professionalism.",
+    "canonical_url": "https://beast-mode-movers.netlify.app/",
+    "og_title": "Beast Mode Movers",
+    "og_description": "Your trusted moving experts for both local and long-distance moves.",
+    "twitter_title": "Beast Mode Movers",
+    "twitter_description": "Professional movers for all your needs. Serving local and long-distance moves.",
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "MovingCompany",
+      "name": "Beast Mode Movers",
+      "telephone": "+1-234-567-890",
+      "email": "info@beastmovemovers.com"
+    }
+  },
+  "services": {
+    "seo_title": "Our Moving Services",
+    "seo_description": "Discover our professional moving services for homes, offices, and more.",
+    "canonical_url": "https://beast-mode-movers.netlify.app/services",
+    "og_title": "Our Services",
+    "og_description": "Learn about our moving services, including packing, loading, and unpacking.",
+    "twitter_title": "Our Services",
+    "twitter_description": "We offer various moving services to fit your needs.",
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Moving Services"
+    }
+  },
+  "about": {
+    "seo_title": "About Beast Mode Movers",
+    "seo_description": "Learn about Beast Mode Movers, a professional Florida moving company serving homes and businesses with care.",
+    "canonical_url": "https://beast-mode-movers.netlify.app/about",
+    "og_title": "About Beast Mode Movers",
+    "og_description": "Meet the Beast Mode Movers team and learn how we help Florida customers move with confidence.",
+    "twitter_title": "About Beast Mode Movers",
+    "twitter_description": "Professional Florida movers focused on reliable service, careful handling, and transparent pricing.",
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Beast Mode Movers",
+      "url": "https://beast-mode-movers.netlify.app/about"
+    }
+  },
+  "locations": {
+    "seo_title": "Beast Mode Movers Service Areas",
+    "seo_description": "Find Beast Mode Movers service areas across Melbourne, Titusville, Rockledge, Brevard County, and nearby Florida communities.",
+    "canonical_url": "https://beast-mode-movers.netlify.app/locations",
+    "og_title": "Beast Mode Movers Locations",
+    "og_description": "See where Beast Mode Movers provides local and long-distance moving services in Florida.",
+    "twitter_title": "Beast Mode Movers Locations",
+    "twitter_description": "Moving help across Melbourne, Titusville, Rockledge, Brevard County, and nearby Florida areas.",
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Beast Mode Movers Service Areas",
+      "url": "https://beast-mode-movers.netlify.app/locations"
+    }
+  }
+}

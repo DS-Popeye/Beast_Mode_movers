@@ -1,0 +1,31 @@
+{
+  "lead_form": {
+    "eyebrow": "Free Estimate",
+    "cta_title": "Get Your Free Moving Quote",
+    "cta_description": "Tell us about your move and we'll provide a no-obligation estimate. Serving Melbourne, Titusville, Rockledge and all of Brevard County, FL.",
+    "trust_points": [
+      "No hidden fees",
+      "Licensed and insured movers",
+      "Local and long distance moves",
+      "Packing services available",
+      "Piano and hot tub specialists"
+    ],
+    "footer_note": "Beast Mode Movers - Florida's Premier Moving Company\nBrevard County, FL - www.beastmodemovers.com",
+    "form_title": "Request a Free Quote",
+    "success_title": "Quote Request Sent!",
+    "success_message": "Thank you! We've received your moving quote request and will follow up with you shortly. Beast Mode Movers is ready to help you move.",
+    "form_fields": [
+      { "name": "full_name", "type": "text", "label": "Full Name", "required": true, "placeholder": "John Smith" },
+      { "name": "email", "type": "email", "label": "Email Address", "required": true, "placeholder": "john@email.com" },
+      { "name": "moving_from", "type": "text", "label": "Moving From", "required": true, "placeholder": "City, FL" },
+      { "name": "moving_to", "type": "text", "label": "Moving To", "required": true, "placeholder": "City, FL" },
+      { "name": "move_date", "type": "date", "label": "Move Date", "required": false },
+      { "name": "home_size", "type": "select", "label": "Home Size", "required": false, "options": ["Studio / 1 Bedroom", "2 Bedrooms", "3 Bedrooms", "4+ Bedrooms", "Office / Commercial"] },
+      { "name": "service_type", "type": "select", "label": "Service Type", "required": false, "options": ["Residential", "Commercial", "Packing"] },
+      { "name": "details", "type": "textarea", "label": "Moving Details", "required": false, "placeholder": "Tell us more about your move, any specialty items, or specific requirements..." },
+      { "name": "packing_service", "type": "checkbox", "label": "I'm interested in packing services (we bring all materials)", "required": false, "value": "Yes" }
+    ],
+    "cta_button_text": "Submit Request",
+    "privacy_note": "No spam. No obligation. We'll respond promptly with your free estimate."
+  }
+}

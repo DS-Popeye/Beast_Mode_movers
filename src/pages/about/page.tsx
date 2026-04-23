@@ -14,10 +14,12 @@ import AboutWhyChooseUs from './components/AboutWhyChooseUs';
 import AboutStory from './components/AboutStory';
 import AboutTestimonials from './components/AboutTestimonials';
 import AboutTeam from './components/AboutTeam';
+import SeoMeta from '../../components/SeoMeta';
 
 export default function AboutPage() {
   return (
     <main className="font-inter">
+      <SeoMeta page="about" />
       <InnerHeader />
       <AboutHero />
       <AboutStats />

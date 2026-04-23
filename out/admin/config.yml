@@ -8,6 +8,214 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
+  - name: "media"
+    label: "Media Library"
+    folder: "src/content/media"
+    create: true
+    extension: "json"
+    format: "json"
+    identifier_field: "alt_text"
+    fields:
+      - { name: "image", label: "Image", widget: "image", required: true }
+      - { name: "alt_text", label: "Alt Text", widget: "string", required: true }
+      - { name: "caption", label: "Caption", widget: "string", required: false }
+
+  - name: "image_settings"
+    label: "Image Settings"
+    files:
+      - name: "images"
+        label: "Image Index"
+        file: "src/content/images.json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            summary: "{{fields.alt_text}}"
+            allow_add: true
+            fields:
+              - { name: "image", label: "Image", widget: "image", required: true }
+              - { name: "alt_text", label: "Alt Text", widget: "string", required: true }
+              - { name: "caption", label: "Caption", widget: "string", required: false }
+
+  - name: "services"
+    label: "Services"
+    files:
+      - name: "services"
+        label: "Service Details"
+        file: "src/content/services.json"
+        fields:
+          - label: "Local Moving"
+            name: "local_moving"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: true }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: true }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+              - { label: "Features", name: "features", widget: "list", required: false }
+              - { label: "CTA Button", name: "cta_button", widget: "string", required: false }
+          - label: "Long Distance Moving"
+            name: "long_distance_moving"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: true }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: true }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+              - { label: "Features", name: "features", widget: "list", required: false }
+              - { label: "CTA Button", name: "cta_button", widget: "string", required: false }
+          - label: "Residential Moving"
+            name: "moving_service"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: true }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: true }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+              - { label: "Features", name: "features", widget: "list", required: false }
+              - { label: "CTA Button", name: "cta_button", widget: "string", required: false }
+          - label: "Commercial Moving"
+            name: "commercial_moving"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: true }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: true }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+              - { label: "Features", name: "features", widget: "list", required: false }
+              - { label: "CTA Button", name: "cta_button", widget: "string", required: false }
+          - label: "Packing Services"
+            name: "packing_service"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: true }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: true }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+              - { label: "Features", name: "features", widget: "list", required: false }
+              - { label: "CTA Button", name: "cta_button", widget: "string", required: false }
+          - label: "Specialty Moves"
+            name: "specialty_moves"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: true }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: true }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+              - { label: "Features", name: "features", widget: "list", required: false }
+              - { label: "CTA Button", name: "cta_button", widget: "string", required: false }
+
+  - name: "forms"
+    label: "Forms"
+    files:
+      - name: "forms"
+        label: "Lead Form"
+        file: "src/content/forms.json"
+        fields:
+          - label: "Lead Form"
+            name: "lead_form"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "CTA Title", name: "cta_title", widget: "string", required: true }
+              - { label: "CTA Description", name: "cta_description", widget: "text", required: true }
+              - { label: "Trust Points", name: "trust_points", widget: "list", required: false }
+              - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+              - { label: "Form Title", name: "form_title", widget: "string", required: true }
+              - { label: "Success Title", name: "success_title", widget: "string", required: true }
+              - { label: "Success Message", name: "success_message", widget: "text", required: true }
+              - label: "Form Fields"
+                name: "form_fields"
+                widget: "list"
+                allow_add: true
+                summary: "{{fields.label}} ({{fields.type}})"
+                fields:
+                  - { label: "Name", name: "name", widget: "string", required: true, hint: "Form submission key, such as full_name or email." }
+                  - { label: "Type", name: "type", widget: "select", required: true, options: ["text", "email", "date", "select", "textarea", "checkbox"] }
+                  - { label: "Label", name: "label", widget: "string", required: true }
+                  - { label: "Required", name: "required", widget: "boolean", required: false, default: false }
+                  - { label: "Placeholder", name: "placeholder", widget: "string", required: false }
+                  - { label: "Options", name: "options", widget: "list", required: false, hint: "Only used when Type is select." }
+                  - { label: "Checkbox Value", name: "value", widget: "string", required: false, hint: "Only used when Type is checkbox." }
+              - { label: "CTA Button Text", name: "cta_button_text", widget: "string", required: true }
+              - { label: "Privacy Note", name: "privacy_note", widget: "string", required: false }
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "site"
+        label: "Global Site Settings"
+        file: "src/content/site.json"
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string", required: true }
+          - { label: "Site Description", name: "site_description", widget: "text", required: true }
+          - { label: "Business Phone", name: "business_phone", widget: "string", required: true }
+          - { label: "Business Email", name: "business_email", widget: "string", required: true }
+          - { label: "Business Address", name: "business_address", widget: "string", required: true }
+          - { label: "Schema", name: "schema", widget: "code", default_language: "json", required: true, hint: "Global JSON-LD business schema used across the site." }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "pages"
+        label: "Page SEO"
+        file: "src/content/pages.json"
+        fields:
+          - label: "Home"
+            name: "home"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "seo_title", widget: "string", required: true }
+              - { label: "SEO Description", name: "seo_description", widget: "text", required: true }
+              - { label: "Canonical URL", name: "canonical_url", widget: "string", required: true }
+              - { label: "Open Graph Title", name: "og_title", widget: "string", required: true }
+              - { label: "Open Graph Description", name: "og_description", widget: "text", required: true }
+              - { label: "Twitter Title", name: "twitter_title", widget: "string", required: true }
+              - { label: "Twitter Description", name: "twitter_description", widget: "text", required: true }
+              - { label: "Schema", name: "schema", widget: "code", default_language: "json", required: true, hint: "JSON-LD object for this page." }
+          - label: "Services"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "seo_title", widget: "string", required: true }
+              - { label: "SEO Description", name: "seo_description", widget: "text", required: true }
+              - { label: "Canonical URL", name: "canonical_url", widget: "string", required: true }
+              - { label: "Open Graph Title", name: "og_title", widget: "string", required: true }
+              - { label: "Open Graph Description", name: "og_description", widget: "text", required: true }
+              - { label: "Twitter Title", name: "twitter_title", widget: "string", required: true }
+              - { label: "Twitter Description", name: "twitter_description", widget: "text", required: true }
+              - { label: "Schema", name: "schema", widget: "code", default_language: "json", required: true, hint: "JSON-LD object for this page." }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "seo_title", widget: "string", required: true }
+              - { label: "SEO Description", name: "seo_description", widget: "text", required: true }
+              - { label: "Canonical URL", name: "canonical_url", widget: "string", required: true }
+              - { label: "Open Graph Title", name: "og_title", widget: "string", required: true }
+              - { label: "Open Graph Description", name: "og_description", widget: "text", required: true }
+              - { label: "Twitter Title", name: "twitter_title", widget: "string", required: true }
+              - { label: "Twitter Description", name: "twitter_description", widget: "text", required: true }
+              - { label: "Schema", name: "schema", widget: "code", default_language: "json", required: true, hint: "JSON-LD object for this page." }
+          - label: "Locations"
+            name: "locations"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "seo_title", widget: "string", required: true }
+              - { label: "SEO Description", name: "seo_description", widget: "text", required: true }
+              - { label: "Canonical URL", name: "canonical_url", widget: "string", required: true }
+              - { label: "Open Graph Title", name: "og_title", widget: "string", required: true }
+              - { label: "Open Graph Description", name: "og_description", widget: "text", required: true }
+              - { label: "Twitter Title", name: "twitter_title", widget: "string", required: true }
+              - { label: "Twitter Description", name: "twitter_description", widget: "text", required: true }
+              - { label: "Schema", name: "schema", widget: "code", default_language: "json", required: true, hint: "JSON-LD object for this page." }
+
   - name: "testimonials"
     label: "Testimonials"
     files:

@@ -13,10 +13,12 @@ import Gallery from './components/Gallery';
 import LeadForm from './components/LeadForm';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
+import SeoMeta from '../../components/SeoMeta';
 
 export default function Home() {
   return (
     <main className="font-inter">
+      <SeoMeta page="home" />
       <Header />
       <Hero />
       <TrustBar />

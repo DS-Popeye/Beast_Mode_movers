@@ -14,10 +14,12 @@ import ServiceProblemSolution from './components/ServiceProblemSolution';
 import ServiceProcess from './components/ServiceProcess';
 import ServiceAIBlock from './components/ServiceAIBlock';
 import ServiceFAQ from './components/ServiceFAQ';
+import SeoMeta from '../../components/SeoMeta';
 
 export default function ServicePage() {
   return (
     <main className="font-inter">
+      <SeoMeta page="services" />
       <InnerHeader />
       <ServiceHero />
       <TrustBar />

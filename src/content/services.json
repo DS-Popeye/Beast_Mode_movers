@@ -1,0 +1,56 @@
+{
+  "local_moving": {
+    "title": "Local Moving",
+    "subtitle": "Movers in Florida",
+    "description": "Expert local moves within Melbourne, Titusville, Rockledge, and all surrounding Brevard County cities. Hourly rates, same-day availability, full equipment provided.",
+    "image": "https://readdy.ai/api/search-image?query=Professional%20movers%20in%20dark%20uniforms%20carrying%20large%20sofa%20furniture%20into%20a%20bright%20Florida%20home%2C%20daytime%2C%20local%20moving%20service%2C%20suburban%20neighborhood%2C%20photorealistic%20moving%20day%20scene%2C%20high%20resolution%20commercial%20photography%2C%20warm%20lighting&width=600&height=400&seq=service-local-01&orientation=landscape",
+    "image_alt": "Professional movers carrying furniture into a Florida home",
+    "features": ["Same-day availability", "Hourly transparent rates", "Full equipment included"],
+    "cta_button": "Get a Free Quote"
+  },
+  "long_distance_moving": {
+    "title": "Long Distance Moving",
+    "subtitle": "Florida & Beyond",
+    "description": "Reliable long distance moves across Florida and beyond. Flat-rate quotes, insured transport, GPS-tracked trucks, on-time guaranteed delivery.",
+    "image": "",
+    "image_alt": "Long distance moving truck prepared for transport",
+    "features": ["Flat-rate pricing", "GPS-tracked trucks", "Fully insured transport"],
+    "cta_button": "Get a Free Quote"
+  },
+  "moving_service": {
+    "title": "Residential Moving",
+    "subtitle": "Home Movers",
+    "description": "We offer residential moving services for homes of all sizes.",
+    "image": "/images/moving_service.jpg",
+    "image_alt": "Residential moving service for a home move",
+    "features": ["Furniture protection wrapping", "Fragile item specialists", "Room-by-room placement"],
+    "cta_button": "Get a Free Quote"
+  },
+  "commercial_moving": {
+    "title": "Commercial Moving",
+    "subtitle": "Office & Business",
+    "description": "Office and business relocations planned for zero downtime. We work around your schedule, with evenings and weekends available across Brevard County.",
+    "image": "",
+    "image_alt": "Commercial moving team relocating office equipment",
+    "features": ["Zero downtime planning", "Weekend and evening moves", "IT equipment handling"],
+    "cta_button": "Get a Free Quote"
+  },
+  "packing_service": {
+    "title": "Packing Services",
+    "subtitle": "Full-Service Packing",
+    "description": "Our professional packing team ensures your belongings are securely packed.",
+    "image": "/images/packing_service.jpg",
+    "image_alt": "Professional packing supplies and moving boxes",
+    "features": ["All materials included", "Labeled and organized boxes", "Fragile item wrapping"],
+    "cta_button": "Learn More"
+  },
+  "specialty_moves": {
+    "title": "Specialty Moves",
+    "subtitle": "Pianos, Hot Tubs & More",
+    "description": "Piano moves, hot tub moves, spa moves, and oversized items handled by trained specialists with the proper equipment.",
+    "image": "",
+    "image_alt": "Specialty movers handling oversized items",
+    "features": ["Piano move specialists", "Hot tub and spa relocation", "Oversized item equipment"],
+    "cta_button": "Get a Free Quote"
+  }
+}
