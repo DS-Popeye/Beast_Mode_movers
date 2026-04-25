@@ -34,14 +34,55 @@ function normalizeUrl(url?: string) {
   return (url || '').trim();
 }
 
+function normalizeExternalUrl(url?: string) {
+  const value = normalizeUrl(url);
+
+  if (!value) {
+    return '';
+  }
+
+  if (/^https?:\/\//i.test(value)) {
+    return value;
+  }
+
+  if (/^www\./i.test(value)) {
+    return `https://${value}`;
+  }
+
+  return '';
+}
+
+function normalizeEmail(email?: string) {
+  const value = normalizeUrl(email);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? value : '';
+}
+
+function normalizeGoogleOrEmailLink(value?: string, fallbackEmail?: string) {
+  const googleValue = normalizeUrl(value);
+  const googleEmail = normalizeEmail(googleValue);
+
+  if (googleEmail) {
+    return `mailto:${googleEmail}`;
+  }
+
+  const googleUrl = normalizeExternalUrl(googleValue);
+
+  if (googleUrl) {
+    return googleUrl;
+  }
+
+  const email = normalizeEmail(fallbackEmail);
+  return email ? `mailto:${email}` : '';
+}
+
 export default function Footer() {
-  const websiteUrl = normalizeUrl(site.websiteUrl) || 'https://beast-mode-movers.netlify.app/';
+  const websiteUrl = normalizeExternalUrl(site.websiteUrl) || 'https://beast-mode-movers.netlify.app/';
   const websiteLabel = websiteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
-  const contactEmail = normalizeUrl(site.contactEmail);
+  const contactEmail = normalizeEmail(site.contactEmail);
   const socialLinks = [
-    { label: 'Facebook', icon: 'ri-facebook-fill', href: normalizeUrl(site.facebookUrl) },
-    { label: 'Instagram', icon: 'ri-instagram-line', href: normalizeUrl(site.instagramUrl) },
-    { label: 'Google or Email', icon: 'ri-google-fill', href: normalizeUrl(site.googleUrl) || (contactEmail ? `mailto:${contactEmail}` : '') },
+    { label: 'Facebook', icon: 'ri-facebook-fill', href: normalizeExternalUrl(site.facebookUrl) },
+    { label: 'Instagram', icon: 'ri-instagram-line', href: normalizeExternalUrl(site.instagramUrl) },
+    { label: 'Google or Email', icon: 'ri-google-fill', href: normalizeGoogleOrEmailLink(site.googleUrl, contactEmail) },
   ].filter((item) => item.href);
 
   return (

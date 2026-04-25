@@ -189,9 +189,9 @@ collections:
           - { label: "Contact Email", name: "contactEmail", widget: "string", required: false, hint: "Used for mail links. Leave blank if no public email is confirmed." }
           - { label: "Contact Location", name: "contactLocation", widget: "text", required: false, hint: "Shown in the footer. Example: Melbourne, FL on one line and Brevard County, Florida on the next." }
           - { label: "Website URL", name: "websiteUrl", widget: "string", required: false, hint: "Public website URL shown in the footer." }
-          - { label: "Facebook URL", name: "facebookUrl", widget: "string", required: false, hint: "Leave blank to hide the Facebook icon." }
-          - { label: "Instagram URL", name: "instagramUrl", widget: "string", required: false, hint: "Leave blank to hide the Instagram icon." }
-          - { label: "Google URL", name: "googleUrl", widget: "string", required: false, hint: "Google Business/Profile URL. Leave blank to use email if Contact Email exists, or hide if neither exists." }
+          - { label: "Facebook URL", name: "facebookUrl", widget: "string", required: false, hint: "Example: https://www.facebook.com/yourpage. Leave blank to hide the Facebook icon." }
+          - { label: "Instagram URL", name: "instagramUrl", widget: "string", required: false, hint: "Example: https://www.instagram.com/yourpage. Leave blank to hide the Instagram icon." }
+          - { label: "Google URL", name: "googleUrl", widget: "string", required: false, hint: "Example: https://g.page/yourbusiness or https://www.google.com/search?q=yourbusiness. You may also enter an email address to use a mailto link. Leave blank to use Contact Email if available." }
           - { label: "Schema", name: "schema", widget: "code", default_language: "json", required: true, hint: "Global JSON-LD business schema used across the site." }
 
   - name: "pages"
