@@ -25,7 +25,7 @@ export default function LocationHero() {
               <Link to="/#contact" className="bg-[#70DC28] text-[#0f0f0f] px-8 py-4 rounded-md font-black text-sm text-center whitespace-nowrap hover:bg-[#58C016] transition-colors cursor-pointer">
                 Get Free Melbourne Quote →
               </Link>
-              <a href="tel:+1" className="bg-white/10 border border-white/30 text-white px-8 py-4 rounded-md font-bold text-sm text-center whitespace-nowrap hover:bg-white/20 transition-colors cursor-pointer">
+              <a href="#contact" className="bg-white/10 border border-white/30 text-white px-8 py-4 rounded-md font-bold text-sm text-center whitespace-nowrap hover:bg-white/20 transition-colors cursor-pointer">
                 Call Our Melbourne Team
               </a>
             </div>

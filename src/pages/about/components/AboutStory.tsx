@@ -7,6 +7,8 @@ export default function AboutStory() {
             <img
               src="https://readdy.ai/api/search-image?query=Interior%20of%20a%20moving%20truck%20cab%20with%20professional%20organized%20moving%20equipment%20neatly%20stored%2C%20ropes%20straps%20blankets%20and%20dollies%20visible%20through%20open%20truck%20bay%20doors%2C%20Florida%20professional%20moving%20company%20operations%2C%20golden%20afternoon%20light%2C%20photorealistic%20commercial%20photography%2C%20no%20logos%20no%20branding%2C%20clean%20organized%20professional%20storage&width=800&height=600&seq=about-story-v1&orientation=landscape"
               alt="Our story — Beast Mode Movers"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top"
             />
           </div>

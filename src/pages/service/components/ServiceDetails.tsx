@@ -159,7 +159,7 @@ export default function ServiceDetails() {
               Get Free Quote →
             </Link>
             <a
-              href="tel:+1"
+              href="#contact"
               className="bg-white text-[#0f0f0f] px-8 py-4 rounded-md font-black text-sm whitespace-nowrap hover:bg-neutral-100 transition-colors cursor-pointer text-center"
             >
               Call Now
@@ -277,7 +277,7 @@ export default function ServiceDetails() {
               Request a Free Quote →
             </Link>
             <a
-              href="tel:+1"
+              href="#contact"
               className="bg-white/10 border border-white/30 text-white px-10 py-4 rounded-md font-bold text-sm whitespace-nowrap hover:bg-white/20 transition-colors cursor-pointer"
             >
               Call For Immediate Help

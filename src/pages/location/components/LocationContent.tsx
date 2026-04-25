@@ -77,7 +77,7 @@ export default function LocationContent() {
                   Get Free Melbourne Quote →
                 </Link>
                 <a
-                  href="tel:+1"
+                  href="#contact"
                   className="bg-white/10 border border-white/30 text-white px-8 py-4 rounded-md font-bold text-sm text-center whitespace-nowrap hover:bg-white/20 transition-colors cursor-pointer"
                 >
                   Call Our Melbourne Team
@@ -374,7 +374,7 @@ export default function LocationContent() {
               Get Free Melbourne Quote →
             </Link>
             <a
-              href="tel:+1"
+              href="#contact"
               className="bg-white/10 border border-white/30 text-white px-10 py-4 rounded-md font-bold text-sm whitespace-nowrap hover:bg-white/20 transition-colors cursor-pointer"
             >
               Call Now

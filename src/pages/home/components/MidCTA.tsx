@@ -6,6 +6,8 @@ export default function MidCTA() {
         <img
           src="https://readdy.ai/api/search-image?query=Aerial%20overhead%20drone%20view%20of%20a%20professional%20moving%20truck%20parked%20on%20a%20sunny%20Florida%20suburban%20street%20surrounded%20by%20green%20lawns%20and%20palm%20trees%2C%20movers%20working%20below%2C%20bright%20blue%20sky%2C%20warm%20colors%2C%20photorealistic%20high%20resolution%20aerial%20photography&width=1920&height=800&seq=midcta-bg-01&orientation=landscape"
           alt="Professional movers in Florida"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center brightness-50"
         />
         <div className="absolute inset-0 bg-[#0f0f0f]/80" />

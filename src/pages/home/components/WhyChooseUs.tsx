@@ -37,6 +37,8 @@ export default function WhyChooseUs() {
               <img
                 src="https://readdy.ai/api/search-image?query=Professional%20movers%20in%20dark%20uniforms%20carefully%20wrapping%20and%20protecting%20expensive%20furniture%20with%20moving%20blankets%20and%20bubble%20wrap%2C%20professional%20team%20working%20inside%20a%20truck%20or%20home%2C%20boxes%20neatly%20stacked%2C%20premium%20moving%20service%20quality%2C%20photorealistic%2C%20warm%20interior%20lighting%2C%20high%20contrast%20commercial%20photography&width=800&height=1000&seq=why-choose-01&orientation=portrait"
                 alt="Professional movers wrapping furniture with protective blankets"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

@@ -1,20 +1,14 @@
 {
   "site_title": "Beast Mode Movers",
   "site_description": "Providing professional moving services for homes and offices. We make your move easy.",
-  "business_phone": "+1-234-567-890",
-  "business_email": "info@beastmovemovers.com",
-  "business_address": "123 Main St, Hometown, USA",
+  "business_phone": "",
+  "business_email": "",
+  "business_address": "",
   "schema": {
     "@context": "https://schema.org",
     "@type": "MovingCompany",
     "name": "Beast Mode Movers",
-    "telephone": "+1-234-567-890",
-    "email": "info@beastmovemovers.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Main St",
-      "addressLocality": "Hometown",
-      "addressRegion": "USA"
-    }
+    "url": "https://beast-mode-movers.netlify.app/",
+    "areaServed": ["Melbourne, FL", "Titusville, FL", "Rockledge, FL", "Brevard County, FL"]
   }
 }

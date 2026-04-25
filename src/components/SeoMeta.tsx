@@ -22,6 +22,8 @@ const site = siteContent as {
   schema: Record<string, unknown> | string;
 };
 const schemaElementId = 'page-schema';
+const siteUrl = 'https://beast-mode-movers.netlify.app/';
+const socialImageUrl = `${siteUrl}uploads/screenshot-2024-06-11-204950.jpg`;
 
 function setMetaAttribute(selector: string, attribute: 'content' | 'href', value: string) {
   const element = document.head.querySelector(selector);
@@ -123,19 +125,23 @@ export default function SeoMeta({ page }: { page: PageKey }) {
     const ogDescription = seo.og_description || description;
     const twitterTitle = seo.twitter_title || title;
     const twitterDescription = seo.twitter_description || description;
+    const canonicalUrl = seo.canonical_url || siteUrl;
 
     document.title = title;
     ensureMeta('meta[name="description"]', { name: 'description', content: description });
     ensureMeta('meta[property="og:title"]', { property: 'og:title', content: ogTitle });
     ensureMeta('meta[property="og:description"]', { property: 'og:description', content: ogDescription });
-    ensureMeta('meta[property="og:url"]', { property: 'og:url', content: seo.canonical_url });
+    ensureMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+    ensureMeta('meta[property="og:image"]', { property: 'og:image', content: socialImageUrl });
+    ensureMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
     ensureMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: twitterTitle });
     ensureMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: twitterDescription });
-    ensureCanonical(seo.canonical_url);
+    ensureMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: socialImageUrl });
+    ensureCanonical(canonicalUrl);
     updateSchema(seo.schema);
 
     setMetaAttribute('meta[name="description"]', 'content', description);
-    setMetaAttribute('link[rel="canonical"]', 'href', seo.canonical_url);
+    setMetaAttribute('link[rel="canonical"]', 'href', canonicalUrl);
   }, [page]);
 
   return null;

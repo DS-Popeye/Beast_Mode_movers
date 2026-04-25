@@ -34,7 +34,7 @@ export default function AboutTeam() {
           {teamMembers.map((member) => (
             <div key={member.name} className="border border-neutral-200 rounded-lg overflow-hidden">
               <div className="w-full h-52 overflow-hidden">
-                <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" />
+                <img src={member.img} alt={member.name} loading="lazy" decoding="async" className="w-full h-full object-cover object-top" />
               </div>
               <div className="p-6">
                 <p className="text-[#70DC28] text-xs font-bold tracking-widest uppercase mb-1">{member.role}</p>

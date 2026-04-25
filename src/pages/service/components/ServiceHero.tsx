@@ -29,7 +29,7 @@ export default function ServiceHero() {
                 Get Your Free Moving Quote →
               </Link>
               <a
-                href="tel:+1"
+                href="#contact"
                 className="bg-white/10 border border-white/30 text-white px-8 py-4 rounded-md font-bold text-sm text-center whitespace-nowrap hover:bg-white/20 transition-colors cursor-pointer"
               >
                 Call For Availability

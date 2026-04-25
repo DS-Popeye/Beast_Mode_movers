@@ -52,6 +52,8 @@ export default function About() {
               <img
                 src="https://readdy.ai/api/search-image?query=Smiling%20diverse%20professional%20moving%20crew%20team%20standing%20confidently%20in%20front%20of%20a%20large%20moving%20truck%2C%20Florida%20residential%20neighborhood%20with%20palm%20trees%20in%20background%2C%20team%20wearing%20matching%20dark%20uniforms%2C%20bright%20sunny%20Florida%20day%2C%20photorealistic%20commercial%20photography%2C%20warm%20approachable%20professional%2C%20group%20portrait&width=800&height=500&seq=about-team-01&orientation=landscape"
                 alt="Beast Mode Movers professional team"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top"
               />
             </div>

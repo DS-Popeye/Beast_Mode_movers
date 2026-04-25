@@ -11,8 +11,8 @@
       "@context": "https://schema.org",
       "@type": "MovingCompany",
       "name": "Beast Mode Movers",
-      "telephone": "+1-234-567-890",
-      "email": "info@beastmovemovers.com"
+      "url": "https://beast-mode-movers.netlify.app/",
+      "areaServed": ["Melbourne, FL", "Titusville, FL", "Rockledge, FL", "Brevard County, FL"]
     }
   },
   "services": {

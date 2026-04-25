@@ -110,7 +110,7 @@ function TestimonialCard({ r, isActive }: { r: Testimonial; isActive: boolean })
           }`}
         >
           {r.image ? (
-            <img src={r.image} alt={r.name} className="w-full h-full rounded-full object-cover" />
+            <img src={r.image} alt={r.name} loading="lazy" decoding="async" className="w-full h-full rounded-full object-cover" />
           ) : (
             initials
           )}

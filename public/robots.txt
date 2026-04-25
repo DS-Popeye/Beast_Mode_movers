@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beast-mode-movers.netlify.app/sitemap.xml

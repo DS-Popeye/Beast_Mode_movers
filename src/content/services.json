@@ -21,7 +21,7 @@
     "title": "Residential Moving",
     "subtitle": "Home Movers",
     "description": "We offer residential moving services for homes of all sizes.",
-    "image": "/images/moving_service.jpg",
+    "image": "/uploads/screenshot-2024-06-11-204950.jpg",
     "image_alt": "Residential moving service for a home move",
     "features": ["Furniture protection wrapping", "Fragile item specialists", "Room-by-room placement"],
     "cta_button": "Get a Free Quote"
@@ -39,7 +39,7 @@
     "title": "Packing Services",
     "subtitle": "Full-Service Packing",
     "description": "Our professional packing team ensures your belongings are securely packed.",
-    "image": "/images/packing_service.jpg",
+    "image": "/uploads/screenshot-2024-06-11-204950.jpg",
     "image_alt": "Professional packing supplies and moving boxes",
     "features": ["All materials included", "Labeled and organized boxes", "Fragile item wrapping"],
     "cta_button": "Learn More"

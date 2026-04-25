@@ -30,6 +30,8 @@ export default function Footer() {
               <img
                 src="https://static.readdy.ai/image/81164d3ba0f00c2a7e247a9f180c9b75/c0aef1825a99ab99fe6cdac8109d7888.png"
                 alt="Beast Mode Movers"
+                loading="lazy"
+                decoding="async"
                 className="h-16 w-auto object-contain"
               />
             </a>
@@ -116,11 +118,11 @@ export default function Footer() {
                   <i className="ri-global-line text-[#58C016] text-base"></i>
                 </div>
                 <a
-                  href="https://www.beastmodemovers.com"
+                  href="https://beast-mode-movers.netlify.app/"
                   rel="nofollow"
                   className="text-neutral-500 hover:text-[#58C016] text-sm transition-colors cursor-pointer"
                 >
-                  www.beastmodemovers.com
+                  beast-mode-movers.netlify.app
                 </a>
               </li>
               <li className="flex items-start gap-3">

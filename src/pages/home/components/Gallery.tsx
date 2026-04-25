@@ -63,6 +63,8 @@ export default function Gallery() {
             <img
               src={photos[0].src}
               alt={photos[0].label}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -79,6 +81,8 @@ export default function Gallery() {
               <img
                 src={p.src}
                 alt={p.label}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
@@ -96,6 +100,8 @@ export default function Gallery() {
               <img
                 src={p.src}
                 alt={p.label}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
@@ -112,6 +118,8 @@ export default function Gallery() {
             <img
               src={photos[5].src}
               alt={photos[5].label}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
