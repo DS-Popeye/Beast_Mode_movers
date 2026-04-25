@@ -29,7 +29,7 @@
     "title": "Residential Moving",
     "subtitle": "Home Movers",
     "description": "We offer residential moving services for homes of all sizes.",
-    "image": "/uploads/screenshot-2024-06-11-204950.jpg",
+    "image": "https://public.readdy.ai/ai/img_res/95c7ff4d66455e9d0ac00174b23b87b0.jpg",
     "image_alt": "Residential moving service for a home move",
     "features": [
       "Furniture protection wrapping",
@@ -55,7 +55,7 @@
     "title": "Packing Services",
     "subtitle": "Full-Service Packing",
     "description": "Our professional packing team ensures your belongings are securely packed.",
-    "image": "https://www.vincentmover.com/images/packing-service-banner.png",
+    "image": "https://public.readdy.ai/ai/img_res/d5c2b6624d138c1035704655a609cf02.jpg",
     "image_alt": "Professional packing supplies and moving boxes",
     "features": [
       "All materials included",
