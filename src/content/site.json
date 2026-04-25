@@ -1,27 +1,42 @@
 {
   "site_title": "Beast Mode Movers",
-  "site_description": "Providing professional moving services for homes and offices. We make your move easy.",
-  "business_phone": "",
-  "business_email": "",
-  "business_address": "",
-  "contactPhoneDisplay": "",
-  "contactPhoneTel": "",
-  "contactEmail": "",
-  "contactLocation": "Melbourne, FL\nBrevard County, Florida",
-  "websiteUrl": "https://beast-mode-movers.netlify.app/",
-  "facebookUrl": "",
-  "instagramUrl": "",
-  "googleUrl": "",
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["MovingCompany", "LocalBusiness"],
+    "@type": [
+      "MovingCompany",
+      "LocalBusiness"
+    ],
     "name": "Beast Mode Movers",
     "url": "https://beast-mode-movers.netlify.app/",
-    "areaServed": ["Melbourne, FL", "Titusville, FL", "Rockledge, FL", "Brevard County, FL"],
-    "serviceType": ["Local Moving", "Residential Moving", "Apartment Moving", "Commercial Moving", "Packing and Loading", "Furniture and Equipment Moving"],
+    "areaServed": [
+      "Melbourne, FL",
+      "Titusville, FL",
+      "Rockledge, FL",
+      "Brevard County, FL"
+    ],
+    "serviceType": [
+      "Local Moving",
+      "Residential Moving",
+      "Apartment Moving",
+      "Commercial Moving",
+      "Packing and Loading",
+      "Furniture and Equipment Moving"
+    ],
     "potentialAction": {
       "@type": "ContactAction",
       "target": "https://beast-mode-movers.netlify.app/#contact"
     }
-  }
+  },
+  "site_description": "Providing professional moving services for homes and offices. We make your move easy.",
+  "facebookUrl": "www.facebook.com",
+  "contactPhoneTel": "+11234567891",
+  "business_phone": "",
+  "websiteUrl": "https://beast-mode-movers.netlify.app/",
+  "contactPhoneDisplay": "+11234567891",
+  "business_address": "",
+  "contactLocation": "Melbourne, FL\nBrevard County, Florida",
+  "googleUrl": "www.google.com",
+  "contactEmail": "test@gmail.com",
+  "instagramUrl": "www.instagram.com",
+  "business_email": ""
 }
