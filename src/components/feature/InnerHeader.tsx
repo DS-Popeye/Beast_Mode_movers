@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import siteContent from '../../content/site.json';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -8,10 +9,20 @@ const navLinks = [
   { label: 'Locations', href: '/locations' },
 ];
 
+const site = siteContent as {
+  contactPhoneTel?: string;
+};
+
+function getCallHref(phone?: string) {
+  const sanitized = (phone || '').replace(/[^\d+]/g, '');
+  return sanitized ? `tel:${sanitized}` : '#contact';
+}
+
 export default function InnerHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
+  const callHref = getCallHref(site.contactPhoneTel);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -54,7 +65,7 @@ export default function InnerHeader() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="#contact"
+            href={callHref}
             className="flex items-center gap-2 text-neutral-800 hover:text-[#58C016] px-4 py-2 rounded-md text-[13px] font-bold transition-all whitespace-nowrap cursor-pointer border border-neutral-200 hover:border-[#70DC28]"
           >
             <div className="w-4 h-4 flex items-center justify-center">
@@ -91,13 +102,13 @@ export default function InnerHeader() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/#contact"
+            <a
+              href={callHref}
               className="mt-4 bg-[#70DC28] text-[#0f0f0f] px-5 py-3.5 rounded-md font-bold text-sm text-center whitespace-nowrap cursor-pointer"
               onClick={() => setMenuOpen(false)}
             >
-              Get Free Moving Quote
-            </Link>
+              Call For Quote
+            </a>
           </nav>
         </div>
       )}

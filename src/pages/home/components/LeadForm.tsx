@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import formsContent from '../../../content/forms.json';
+import siteContent from '../../../content/site.json';
 
 const FORM_URL = 'https://readdy.ai/api/form/d6skihih642up23ipus0';
 
@@ -28,6 +29,15 @@ type LeadFormContent = {
 };
 
 const leadForm = formsContent.lead_form as LeadFormContent;
+const site = siteContent as {
+  contactPhoneDisplay?: string;
+  contactPhoneTel?: string;
+};
+
+function getTelHref(phone?: string) {
+  const sanitized = (phone || '').replace(/[^\d+]/g, '');
+  return sanitized ? `tel:${sanitized}` : '#contact';
+}
 
 function toOptionValue(option: string) {
   return option.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
@@ -66,8 +76,8 @@ function renderField(field: FormField) {
           className={`${baseClass} bg-white`}
           defaultValue=""
         >
-          <option value="">Select {field.label.toLowerCase()}</option>
-          {(field.options || []).map((option) => (
+          <option value="">{field.options?.[0]?.toLowerCase().startsWith('select') ? field.options[0] : `Select ${field.label.toLowerCase()}`}</option>
+          {(field.options?.[0]?.toLowerCase().startsWith('select') ? field.options.slice(1) : field.options || []).map((option) => (
             <option key={option} value={toOptionValue(option)}>
               {option}
             </option>
@@ -99,6 +109,8 @@ export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const phoneDisplay = site.contactPhoneDisplay?.trim();
+  const phoneHref = getTelHref(site.contactPhoneTel);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -169,6 +181,21 @@ export default function LeadForm() {
                   ))}
                 </ul>
               )}
+
+              <div className="rounded-lg bg-[#1a1a1a]/10 border border-[#1a1a1a]/15 p-4 mb-8">
+                {phoneDisplay ? (
+                  <>
+                    <p className="text-[#1a1a1a]/60 text-xs font-bold uppercase tracking-wide mb-1">Prefer to call?</p>
+                    <a href={phoneHref} className="text-[#1a1a1a] font-black text-lg hover:underline">
+                      {phoneDisplay}
+                    </a>
+                  </>
+                ) : (
+                  <p className="text-[#1a1a1a]/70 text-sm leading-relaxed">
+                    Submit the quote form and the moving team will follow up.
+                  </p>
+                )}
+              </div>
             </div>
 
             {leadForm.footer_note && (

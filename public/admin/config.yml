@@ -184,9 +184,14 @@ collections:
         fields:
           - { label: "Site Title", name: "site_title", widget: "string", required: true }
           - { label: "Site Description", name: "site_description", widget: "text", required: true }
-          - { label: "Business Phone", name: "business_phone", widget: "string", required: true }
-          - { label: "Business Email", name: "business_email", widget: "string", required: true }
-          - { label: "Business Address", name: "business_address", widget: "string", required: true }
+          - { label: "Phone Number Display", name: "contactPhoneDisplay", widget: "string", required: false, hint: "Shown on the website, for example (321) 000-0000. Leave blank until the real number is confirmed." }
+          - { label: "Phone Number for Click-to-Call", name: "contactPhoneTel", widget: "string", required: false, hint: "Use tel-safe format when real number is known, for example +13210000000. Leave blank to send users to the quote form." }
+          - { label: "Contact Email", name: "contactEmail", widget: "string", required: false, hint: "Used for mail links. Leave blank if no public email is confirmed." }
+          - { label: "Contact Location", name: "contactLocation", widget: "text", required: false, hint: "Shown in the footer. Example: Melbourne, FL on one line and Brevard County, Florida on the next." }
+          - { label: "Website URL", name: "websiteUrl", widget: "string", required: false, hint: "Public website URL shown in the footer." }
+          - { label: "Facebook URL", name: "facebookUrl", widget: "string", required: false, hint: "Leave blank to hide the Facebook icon." }
+          - { label: "Instagram URL", name: "instagramUrl", widget: "string", required: false, hint: "Leave blank to hide the Instagram icon." }
+          - { label: "Google URL", name: "googleUrl", widget: "string", required: false, hint: "Google Business/Profile URL. Leave blank to use email if Contact Email exists, or hide if neither exists." }
           - { label: "Schema", name: "schema", widget: "code", default_language: "json", required: true, hint: "Global JSON-LD business schema used across the site." }
 
   - name: "pages"

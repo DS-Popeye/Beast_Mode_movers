@@ -21,7 +21,7 @@
       { "name": "moving_to", "type": "text", "label": "Moving To", "required": true, "placeholder": "City, FL" },
       { "name": "move_date", "type": "date", "label": "Move Date", "required": false },
       { "name": "home_size", "type": "select", "label": "Home Size", "required": false, "options": ["Studio / 1 Bedroom", "2 Bedrooms", "3 Bedrooms", "4+ Bedrooms", "Office / Commercial"] },
-      { "name": "service_type", "type": "select", "label": "Service Type", "required": false, "options": ["Residential", "Commercial", "Packing"] },
+      { "name": "service_type", "type": "select", "label": "Service Type", "required": false, "options": ["Select service", "Local Moving", "Long Distance Moving", "Residential Moving", "Commercial Moving", "Packing Services", "Piano Move", "Hot Tub / Spa Move"] },
       { "name": "details", "type": "textarea", "label": "Moving Details", "required": false, "placeholder": "Tell us more about your move, any specialty items, or specific requirements..." },
       { "name": "packing_service", "type": "checkbox", "label": "I'm interested in packing services (we bring all materials)", "required": false, "value": "Yes" }
     ],
