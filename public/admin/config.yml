@@ -111,6 +111,35 @@ collections:
               - { label: "Features", name: "features", widget: "list", required: false }
               - { label: "CTA Button", name: "cta_button", widget: "string", required: false }
 
+  - name: "service_page_content"
+    label: "Service Page Content"
+    files:
+      - name: "service_pages"
+        label: "Detailed Service Sections"
+        file: "src/content/servicePages.json"
+        fields:
+          - label: "Future Service Routes"
+            name: "future_routes"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Slug", name: "slug", widget: "string", required: true }
+              - { label: "Title", name: "title", widget: "string", required: true }
+          - label: "Service Sections"
+            name: "service_sections"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string", required: true }
+              - { label: "Title", name: "title", widget: "string", required: true }
+              - { label: "Summary", name: "summary", widget: "text", required: true }
+              - { label: "CTA", name: "cta", widget: "string", required: true }
+          - label: "Service FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "q", widget: "string", required: true }
+              - { label: "Answer", name: "a", widget: "text", required: true }
+
   - name: "forms"
     label: "Forms"
     files:

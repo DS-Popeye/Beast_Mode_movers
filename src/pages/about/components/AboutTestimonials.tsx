@@ -4,17 +4,17 @@ export default function AboutTestimonials() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-[#70DC28] font-bebas tracking-[0.3em] text-sm mb-3">TRUST &amp; CREDENTIALS</p>
+            <p className="text-[#70DC28] font-bebas tracking-[0.3em] text-sm mb-3">HOW WE WORK</p>
             <h2 className="font-bebas text-5xl lg:text-6xl text-white leading-tight mb-8">
-              LICENSED, INSURED &amp;<br />
-              <span className="text-[#70DC28]">BACKGROUND CHECKED</span>
+              CLEAR PLANNING FOR<br />
+              <span className="text-[#70DC28]">EVERY MOVING REQUEST</span>
             </h2>
             <ul className="flex flex-col gap-5">
               {[
-                { icon: 'ri-government-line', title: 'Florida DOT Licensed', desc: 'Fully registered and licensed with the Florida Department of Transportation as a professional moving company.' },
-                { icon: 'ri-shield-check-line', title: 'Fully Insured', desc: 'Comprehensive liability insurance on every move. Your belongings are protected from pickup to delivery.' },
-                { icon: 'ri-user-search-line', title: 'Background-Checked Crew', desc: 'Every team member is background-checked and professionally trained before their first move.' },
-                { icon: 'ri-customer-service-2-line', title: 'Responsive & Accountable', desc: 'Direct line to ownership. We answer calls, respond to messages, and stand behind every job we do.' },
+                { icon: 'ri-file-list-3-line', title: 'Quote-Based Move Details', desc: 'Customers can share move date, addresses, home type, business type, large items, and access notes through the quote form.' },
+                { icon: 'ri-archive-2-line', title: 'Packing and Loading Options', desc: 'Packing, loading, unloading, and partial moving support can be discussed based on the needs of the move.' },
+                { icon: 'ri-tools-line', title: 'Furniture and Equipment Notes', desc: 'Bulky furniture, office items, appliances, and equipment should be listed so the team can review the scope.' },
+                { icon: 'ri-customer-service-2-line', title: 'Availability Follow-Up', desc: 'The moving team can follow up about service area coverage, availability, and next steps after the request is submitted.' },
               ].map((item) => (
                 <li key={item.title} className="flex items-start gap-4">
                   <div className="w-10 h-10 flex items-center justify-center bg-[#70DC28]/10 rounded-md flex-shrink-0">
@@ -29,23 +29,16 @@ export default function AboutTestimonials() {
             </ul>
           </div>
           <div className="bg-white/5 border border-white/10 rounded-lg p-8">
-            <p className="text-[#70DC28] font-bebas tracking-[0.2em] text-sm mb-5">WHAT CUSTOMERS SAY</p>
+            <p className="text-[#70DC28] font-bebas tracking-[0.2em] text-sm mb-5">SERVICE REQUESTS</p>
             <div className="flex flex-col gap-5">
               {[
-                { name: 'Sarah M.', loc: 'Melbourne, FL', text: 'Beast Mode Movers showed up exactly on time, handled everything with care, and finished faster than expected. Absolutely the best movers in Brevard County.' },
-                { name: 'James K.', loc: 'Titusville, FL', text: 'Used them for a commercial office move. They worked overnight to avoid disrupting business hours. Unbelievably professional. Will use again.' },
-                { name: 'Linda R.', loc: 'Rockledge, FL', text: 'Moved our piano and a hot tub in the same day. No damage. On time. Exactly what they quoted. These guys are the real deal.' },
-              ].map((r) => (
-                <div key={r.name} className="border-b border-white/10 pb-5 last:border-0 last:pb-0">
-                  <div className="flex items-center gap-1 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i} className="w-3 h-3 flex items-center justify-center">
-                        <i className="ri-star-fill text-[#70DC28] text-xs"></i>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-white/70 text-sm leading-relaxed mb-2 italic">&ldquo;{r.text}&rdquo;</p>
-                  <p className="text-white/40 text-xs font-semibold">{r.name} · {r.loc}</p>
+                { title: 'Residential and Apartment Moving', text: 'Share your home size, building access, stairs, elevators, parking notes, and large items.' },
+                { title: 'Commercial Moving', text: 'Describe office furniture, boxed supplies, workstations, equipment, and building access requirements.' },
+                { title: 'Packing, Loading, and Furniture Help', text: 'Tell the team whether you need packing, loading-only help, unloading support, or help with bulky items.' },
+              ].map((item) => (
+                <div key={item.title} className="border-b border-white/10 pb-5 last:border-0 last:pb-0">
+                  <p className="text-white font-semibold text-sm mb-2">{item.title}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>

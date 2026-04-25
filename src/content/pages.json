@@ -1,7 +1,7 @@
 {
   "home": {
-    "seo_title": "Beast Mode Movers - Your Trusted Local Movers",
-    "seo_description": "Best moving services for your home or office. Let us handle your move with care and professionalism.",
+    "seo_title": "Beast Mode Movers | Local Movers & Moving Services",
+    "seo_description": "Local moving services for homes, apartments, businesses, packing, loading, and furniture moves in listed Florida service areas.",
     "canonical_url": "https://beast-mode-movers.netlify.app/",
     "og_title": "Beast Mode Movers",
     "og_description": "Your trusted moving experts for both local and long-distance moves.",
@@ -16,8 +16,8 @@
     }
   },
   "services": {
-    "seo_title": "Our Moving Services",
-    "seo_description": "Discover our professional moving services for homes, offices, and more.",
+    "seo_title": "Residential, Apartment & Commercial Moving Services",
+    "seo_description": "Explore residential, apartment, commercial, packing, loading, furniture, equipment, and local moving support from Beast Mode Movers.",
     "canonical_url": "https://beast-mode-movers.netlify.app/services",
     "og_title": "Our Services",
     "og_description": "Learn about our moving services, including packing, loading, and unpacking.",
@@ -25,13 +25,77 @@
     "twitter_description": "We offer various moving services to fit your needs.",
     "schema": {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Moving Services"
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Moving Services",
+          "serviceType": ["Residential Moving", "Apartment Moving", "Commercial Moving", "Packing and Loading", "Furniture and Equipment Moving", "Local Moving Support"],
+          "provider": {
+            "@type": "MovingCompany",
+            "name": "Beast Mode Movers",
+            "url": "https://beast-mode-movers.netlify.app/"
+          },
+          "areaServed": ["Melbourne, FL", "Titusville, FL", "Rockledge, FL", "Brevard County, FL"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What moving services do you provide?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Beast Mode Movers provides local moving support, residential moving, apartment moving, commercial moving, packing and loading help, and furniture or equipment moving. Service availability can be confirmed through the quote form."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you help with apartment moves?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Customers can request apartment moving help for studio, one-bedroom, and multi-bedroom moves. Share elevator, stair, parking, and building access details when requesting a quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer packing and loading support?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Customers can ask about full or partial packing, loading-only help, unloading-only help, or a combination of moving support based on the needs of the move."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can customers request a free quote?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Customers can use the website quote form to share move details and request an estimate. The team can then follow up about availability and next steps."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which areas do you serve?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The website lists service coverage for Melbourne, Titusville, Rockledge, and Brevard County, Florida. Customers should contact the moving team to confirm availability for a specific address."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you handle furniture and equipment moving?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Customers can request help moving furniture, office items, appliances, exercise equipment, and other bulky belongings. Item size, access, and destination details help the team plan properly."
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "about": {
-    "seo_title": "About Beast Mode Movers",
-    "seo_description": "Learn about Beast Mode Movers, a professional Florida moving company serving homes and businesses with care.",
+    "seo_title": "About Beast Mode Movers | Florida Moving Team",
+    "seo_description": "Learn about Beast Mode Movers, a Florida moving team helping customers plan home, apartment, business, packing, and loading support.",
     "canonical_url": "https://beast-mode-movers.netlify.app/about",
     "og_title": "About Beast Mode Movers",
     "og_description": "Meet the Beast Mode Movers team and learn how we help Florida customers move with confidence.",
@@ -45,8 +109,8 @@
     }
   },
   "locations": {
-    "seo_title": "Beast Mode Movers Service Areas",
-    "seo_description": "Find Beast Mode Movers service areas across Melbourne, Titusville, Rockledge, Brevard County, and nearby Florida communities.",
+    "seo_title": "Beast Mode Movers Service Areas | Florida Movers",
+    "seo_description": "See listed Beast Mode Movers service areas, including Melbourne, Titusville, Rockledge, Brevard County, and nearby Florida communities.",
     "canonical_url": "https://beast-mode-movers.netlify.app/locations",
     "og_title": "Beast Mode Movers Locations",
     "og_description": "See where Beast Mode Movers provides local and long-distance moving services in Florida.",

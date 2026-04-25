@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 const benefits = [
   {
     icon: 'ri-star-fill',
-    title: '5-Star Local Reputation',
-    desc: 'Hundreds of five-star reviews from homeowners and businesses across Brevard County. Our reputation is built on results, not promises.',
+    title: 'Local Service Focus',
+    desc: 'Customers can request moving support for the Florida service areas listed on the website and confirm exact availability with the team.',
   },
   {
     icon: 'ri-shield-check-line',
-    title: 'Fully Licensed & Insured',
-    desc: 'We are a Florida DOT licensed moving company with full liability insurance. Every move is covered — your belongings are protected.',
+    title: 'Clear Move Planning',
+    desc: 'Move details, access notes, large items, and packing needs can be shared in advance so the team understands the scope.',
   },
   {
     icon: 'ri-time-line',
@@ -62,8 +62,8 @@ const faqs = [
     a: 'Yes. Beast Mode Movers offers same-day and next-day local moving in Melbourne, Titusville, Rockledge, and surrounding Brevard County cities. Call us directly for urgent availability.',
   },
   {
-    q: 'Are your movers licensed and insured in Florida?',
-    a: 'Absolutely. We are a fully licensed Florida DOT moving company and carry full liability insurance. Every move is covered and our crew is background-checked and professionally trained.',
+    q: 'How do I confirm service details for my move?',
+    a: 'Use the quote form to share your move date, addresses, home or business type, large items, and access notes. The team can follow up about availability and next steps.',
   },
   {
     q: 'What is included in a local moving service?',
@@ -267,7 +267,7 @@ export default function ServiceDetails() {
             <span className="text-[#70DC28]">MOVING QUOTE TODAY</span>
           </h2>
           <p className="text-white/55 text-sm max-w-lg mx-auto mb-8">
-            Same-day response. No obligation. Licensed &amp; insured movers serving all of Brevard County, FL.
+            No obligation. Share your move details so the team can confirm service availability in the listed Florida areas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

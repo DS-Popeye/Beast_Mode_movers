@@ -38,7 +38,7 @@ export default function Testimonials() {
                   <i className="ri-star-fill text-[#70DC28] text-base"></i>
                 </div>
               ))}
-              <span className="text-white/60 text-sm ml-2">5.0 average rating</span>
+              <span className="text-white/60 text-sm ml-2">Customer feedback</span>
             </div>
             <p className="text-white/35 text-xs">Trusted by families & businesses across Brevard County, FL</p>
           </div>

@@ -1,14 +1,14 @@
 const items = [
-  { icon: 'ri-shield-check-line', label: 'Licensed & Insured' },
+  { icon: 'ri-shield-check-line', label: 'Careful Moving Support' },
   { icon: 'ri-home-2-line', label: 'Residential Movers' },
   { icon: 'ri-building-2-line', label: 'Commercial Movers' },
-  { icon: 'ri-road-map-line', label: 'Local & Long Distance' },
-  { icon: 'ri-music-2-line', label: 'Piano Specialists' },
-  { icon: 'ri-drop-line', label: 'Hot Tub & Spa Moves' },
+  { icon: 'ri-road-map-line', label: 'Local Moving Support' },
+  { icon: 'ri-community-line', label: 'Apartment Moving' },
+  { icon: 'ri-tools-line', label: 'Furniture & Equipment' },
   { icon: 'ri-map-pin-2-line', label: 'Serving Brevard County FL' },
-  { icon: 'ri-archive-2-line', label: 'Full Packing Services' },
-  { icon: 'ri-star-fill', label: '5-Star Rated' },
-  { icon: 'ri-truck-line', label: 'Professional Fleet' },
+  { icon: 'ri-archive-2-line', label: 'Packing and Loading' },
+  { icon: 'ri-star-fill', label: 'Customer-Focused Service' },
+  { icon: 'ri-truck-line', label: 'Quote Requests Available' },
 ];
 
 export default function TrustBar() {

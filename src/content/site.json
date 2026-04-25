@@ -6,9 +6,14 @@
   "business_address": "",
   "schema": {
     "@context": "https://schema.org",
-    "@type": "MovingCompany",
+    "@type": ["MovingCompany", "LocalBusiness"],
     "name": "Beast Mode Movers",
     "url": "https://beast-mode-movers.netlify.app/",
-    "areaServed": ["Melbourne, FL", "Titusville, FL", "Rockledge, FL", "Brevard County, FL"]
+    "areaServed": ["Melbourne, FL", "Titusville, FL", "Rockledge, FL", "Brevard County, FL"],
+    "serviceType": ["Local Moving", "Residential Moving", "Apartment Moving", "Commercial Moving", "Packing and Loading", "Furniture and Equipment Moving"],
+    "potentialAction": {
+      "@type": "ContactAction",
+      "target": "https://beast-mode-movers.netlify.app/#contact"
+    }
   }
 }

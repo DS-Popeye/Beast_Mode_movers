@@ -1,0 +1,88 @@
+{
+  "future_routes": [
+    {
+      "slug": "/services/residential-moving",
+      "title": "Residential Moving"
+    },
+    {
+      "slug": "/services/apartment-moving",
+      "title": "Apartment Moving"
+    },
+    {
+      "slug": "/services/commercial-moving",
+      "title": "Commercial Moving"
+    },
+    {
+      "slug": "/services/packing-loading",
+      "title": "Packing and Loading"
+    },
+    {
+      "slug": "/services/furniture-equipment-moving",
+      "title": "Furniture and Equipment Moving"
+    }
+  ],
+  "service_sections": [
+    {
+      "id": "residential-moving",
+      "title": "Residential Moving Services",
+      "summary": "Residential moving support helps households plan, pack, load, transport, and settle into a new home with less stress. Beast Mode Movers works with customers moving from houses, condos, townhomes, and smaller living spaces, with service details confirmed through the quote request. The team can help with common moving needs such as furniture protection, careful loading, organized unloading, and placement of belongings in the new space. Residential moves often involve stairs, narrow halls, fragile items, large furniture, and timing challenges, so the planning conversation matters. Customers can use the quote form to share the move date, origin, destination, home size, and any special items. This gives the moving team enough context to recommend the right level of help and confirm whether packing, loading, or specialty support is needed.",
+      "cta": "Request Residential Moving Help"
+    },
+    {
+      "id": "apartment-moving",
+      "title": "Apartment Moving Services",
+      "summary": "Apartment moves often require extra coordination because buildings may have elevators, loading zones, parking rules, stairs, tight hallways, and move-in time windows. Beast Mode Movers can help apartment customers prepare for those details before moving day. Customers should share building access notes, floor level, elevator availability, parking limits, and any property requirements when requesting a quote. Apartment moving support may include loading boxes and furniture, protecting larger items, navigating shared spaces carefully, and unloading belongings into the new apartment. This service is useful for studio, one-bedroom, and multi-bedroom apartment moves, as well as moves between apartments and houses. For the most accurate guidance, customers can contact the team with both addresses and a short list of large items.",
+      "cta": "Plan an Apartment Move"
+    },
+    {
+      "id": "commercial-moving",
+      "title": "Commercial Moving Services",
+      "summary": "Commercial moving support is designed for businesses that need an organized relocation without unnecessary disruption. Beast Mode Movers can help with office furniture, boxed files, workstations, small equipment, supplies, and other business items that need careful handling. A commercial move usually starts with a clear scope: what needs to move, when the space is available, whether elevators or loading docks are involved, and which items need priority placement at the destination. The moving team can confirm availability and recommend next steps through the quote form. This content is intentionally practical: business moves work best when the moving company understands access rules, building requirements, item types, and scheduling needs before move day. Customers should include those details when requesting commercial moving help.",
+      "cta": "Request Commercial Moving Help"
+    },
+    {
+      "id": "packing-loading",
+      "title": "Packing and Loading Support",
+      "summary": "Packing and loading support helps customers who need more than transportation. Some moves require careful boxing, furniture wrapping, loading-only labor, unloading-only labor, or help organizing items before they leave the property. Beast Mode Movers can discuss packing and loading needs during the quote process so customers understand what support is available for their move. Packing needs may vary by item type, home size, fragile belongings, and timeline. Loading support may be useful for rental trucks, storage moves, apartment moves, or customers who already have transportation arranged. Customers should describe whether they need full packing, partial packing, loading help, unloading help, or a combination. The moving team can then confirm availability and suggest the right next step.",
+      "cta": "Ask About Packing and Loading"
+    },
+    {
+      "id": "furniture-equipment-moving",
+      "title": "Furniture and Equipment Moving",
+      "summary": "Furniture and equipment moving focuses on larger, heavier, or awkward items that need careful planning. This may include couches, bedroom sets, dining tables, desks, office furniture, appliances, shelving, exercise equipment, and other bulky belongings. The best approach depends on item size, access points, stairs, doorways, destination layout, and whether disassembly is needed. Beast Mode Movers asks customers to describe large items in the quote request so the team can confirm what support is appropriate. Furniture and equipment moves can be part of a full residential or commercial move, or they can be requested as focused moving help for a smaller list of items. Photos, dimensions, and access notes can make the quote conversation much more accurate.",
+      "cta": "Move Furniture or Equipment"
+    },
+    {
+      "id": "local-moving-support",
+      "title": "Local Moving Support",
+      "summary": "Local moving support is built around short-distance moves where timing, access, and careful handling matter. Beast Mode Movers serves the Florida service areas listed on the website, including Melbourne, Titusville, Rockledge, and Brevard County references already shown on the site. Customers can use the quote form to confirm whether their exact pickup and delivery locations are covered. Local moving help may include residential moves, apartment moves, business relocations, packing support, loading support, and furniture moving. A good local move starts with clear details: move date, address type, stairs or elevators, home size, large items, and any special requirements. The team can then confirm availability and explain the best next step.",
+      "cta": "Check Local Moving Availability"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What moving services do you provide?",
+      "a": "Beast Mode Movers provides local moving support, residential moving, apartment moving, commercial moving, packing and loading help, and furniture or equipment moving. Service availability can be confirmed through the quote form."
+    },
+    {
+      "q": "Do you help with apartment moves?",
+      "a": "Yes. Customers can request apartment moving help for studio, one-bedroom, and multi-bedroom moves. Share elevator, stair, parking, and building access details when requesting a quote."
+    },
+    {
+      "q": "Do you offer packing and loading support?",
+      "a": "Yes. Customers can ask about full or partial packing, loading-only help, unloading-only help, or a combination of moving support based on the needs of the move."
+    },
+    {
+      "q": "Can customers request a free quote?",
+      "a": "Yes. Customers can use the website quote form to share move details and request an estimate. The team can then follow up about availability and next steps."
+    },
+    {
+      "q": "Which areas do you serve?",
+      "a": "The website lists service coverage for Melbourne, Titusville, Rockledge, and Brevard County, Florida. Customers should contact the moving team to confirm availability for a specific address."
+    },
+    {
+      "q": "Do you handle furniture and equipment moving?",
+      "a": "Yes. Customers can request help moving furniture, office items, appliances, exercise equipment, and other bulky belongings. Item size, access, and destination details help the team plan properly."
+    }
+  ]
+}

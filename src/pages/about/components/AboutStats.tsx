@@ -1,7 +1,7 @@
 const trustStats = [
   { num: '500+', label: 'Moves Completed' },
   { num: '5★', label: 'Average Rating' },
-  { num: '100%', label: 'Licensed & Insured' },
+  { num: '6', label: 'Core Services' },
   { num: '6+', label: 'Years Serving Brevard' },
 ];
 

@@ -19,7 +19,7 @@ export default function ServiceHero() {
               <span className="block text-[2.5rem] lg:text-[3.5rem] text-white/80">MELBOURNE, FL</span>
             </h1>
             <p className="text-white/70 text-base leading-relaxed max-w-lg mb-8">
-              Trusted, licensed, and fully insured local movers serving Melbourne, Titusville, Rockledge, and all of Brevard County. Transparent hourly rates, same-day availability, and zero hidden fees.
+              Local moving support for residential, apartment, commercial, packing, loading, furniture, and equipment moves. Contact the team to confirm availability for your pickup and delivery addresses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -37,9 +37,9 @@ export default function ServiceHero() {
             </div>
             <div className="flex flex-wrap gap-5 mt-8">
               {[
-                { icon: 'ri-shield-check-line', label: 'Licensed & Insured' },
-                { icon: 'ri-time-line', label: 'Same-Day Available' },
-                { icon: 'ri-money-dollar-circle-line', label: 'No Hidden Fees' },
+                { icon: 'ri-shield-check-line', label: 'Careful Item Handling' },
+                { icon: 'ri-time-line', label: 'Availability by Quote' },
+                { icon: 'ri-money-dollar-circle-line', label: 'Request Estimate Details' },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-2">
                   <div className="w-5 h-5 flex items-center justify-center">

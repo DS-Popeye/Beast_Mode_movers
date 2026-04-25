@@ -33,10 +33,10 @@ const breakdown = [
     icon: 'ri-shield-check-line',
     title: 'Protection & Insurance',
     items: [
-      'Licensed mover under Florida DOT',
-      'Full liability insurance coverage',
-      'Item-level damage protection',
-      'Transparent claims process if needed',
+      'Move scope reviewed before scheduling',
+      'Item details confirmed through the quote form',
+      'Large item and access notes requested upfront',
+      'Service expectations discussed before move day',
     ],
   },
   {

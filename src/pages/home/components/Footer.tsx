@@ -1,21 +1,19 @@
 const services = [
-  { label: 'Local Moving', href: '#services' },
-  { label: 'Long Distance Moving', href: '#services' },
-  { label: 'Residential Moving', href: '#services' },
-  { label: 'Commercial Moving', href: '#services' },
-  { label: 'Packing Services', href: '#services' },
-  { label: 'Piano Moving', href: '#services' },
-  { label: 'Hot Tub & Spa Moves', href: '#services' },
+  { label: 'Local Moving Support', href: '/services#local-moving-support' },
+  { label: 'Residential Moving', href: '/services#residential-moving' },
+  { label: 'Apartment Moving', href: '/services#apartment-moving' },
+  { label: 'Commercial Moving', href: '/services#commercial-moving' },
+  { label: 'Packing and Loading', href: '/services#packing-loading' },
+  { label: 'Furniture and Equipment Moving', href: '/services#furniture-equipment-moving' },
 ];
 
 const quickLinks = [
-  { label: 'About Us', href: '#about' },
-  { label: 'Service Areas', href: '#areas' },
-  { label: 'Moving Process', href: '#process' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'Home', href: '/' },
+  { label: 'Moving Services', href: '/services' },
+  { label: 'Service Areas', href: '/locations' },
+  { label: 'About the Moving Team', href: '/about' },
+  { label: 'Moving FAQ', href: '/services#services-faq' },
+  { label: 'Request a Moving Quote', href: '/#contact' },
 ];
 
 export default function Footer() {
@@ -37,7 +35,7 @@ export default function Footer() {
             </a>
             <p className="text-neutral-500 text-sm leading-relaxed mb-6">
               Florida&apos;s trusted moving company serving Melbourne, Titusville, Rockledge &amp;
-              all of Brevard County. Licensed, insured &amp; built to move.
+              all of Brevard County. Contact the team to confirm service availability for your move.
             </p>
             <div className="flex gap-3">
               {['ri-facebook-fill', 'ri-instagram-line', 'ri-google-fill'].map((icon) => (
@@ -161,7 +159,7 @@ export default function Footer() {
           </p>
           <span className="hidden sm:flex items-center gap-1 bg-neutral-100 px-3 py-1 rounded-full">
             <i className="ri-shield-check-line text-[#58C016] text-xs"></i>
-            <span className="text-neutral-500 text-xs">Licensed &amp; Insured</span>
+            <span className="text-neutral-500 text-xs">Service details confirmed by quote</span>
           </span>
         </div>
         <div className="flex gap-5">

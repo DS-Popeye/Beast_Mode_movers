@@ -1,8 +1,8 @@
 const stats = [
   { value: '14+', label: 'Cities Served' },
-  { value: '100%', label: 'Insured Moves' },
-  { value: '5★', label: 'Rated Service' },
-  { value: 'FL', label: 'Licensed Movers' },
+  { value: '6', label: 'Core Services' },
+  { value: 'FL', label: 'Service Areas' },
+  { value: 'Quote', label: 'Requests' },
 ];
 
 export default function About() {
@@ -70,14 +70,14 @@ export default function About() {
                 <div className="w-8 h-8 flex items-center justify-center mb-3">
                   <i className="ri-music-2-line text-[#0f0f0f] text-xl"></i>
                 </div>
-                <p className="font-bebas text-xl text-[#0f0f0f] leading-tight">PIANO SPECIALISTS</p>
+                <p className="font-bebas text-xl text-[#0f0f0f] leading-tight">FURNITURE SUPPORT</p>
               </div>
             </div>
 
             {/* Offset badge top-right */}
             <div className="absolute top-4 right-0 bg-[#70DC28] p-5 rounded-xl w-28 text-center">
               <p className="font-bebas text-3xl text-[#0f0f0f] leading-none">FL</p>
-              <p className="text-[#0f0f0f] font-black text-[10px] mt-1">LICENSED</p>
+              <p className="text-[#0f0f0f] font-black text-[10px] mt-1">SERVICE AREA</p>
             </div>
           </div>
         </div>

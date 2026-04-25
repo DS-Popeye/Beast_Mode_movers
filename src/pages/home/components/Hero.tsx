@@ -40,8 +40,8 @@ export default function Hero() {
 
             {/* 3. Supporting text */}
             <p className="text-white text-lg leading-relaxed max-w-xl mb-8 font-medium" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}>
-              Licensed &amp; insured movers handling residential, commercial, piano &amp; specialty moves
-              across Melbourne, Titusville, Rockledge and all of Brevard County.
+              Moving support for residential, apartment, commercial, packing, loading, furniture,
+              and local moves across the listed Florida service areas.
             </p>
 
             {/* 4. CTA section — clearly separated */}
@@ -73,10 +73,10 @@ export default function Hero() {
             {/* Trust badges */}
             <div className="flex flex-wrap gap-5">
               {[
-                { icon: 'ri-shield-check-line', label: 'Licensed & Insured' },
-                { icon: 'ri-star-fill', label: '5-Star Rated' },
-                { icon: 'ri-music-2-line', label: 'Piano Specialists' },
-                { icon: 'ri-road-map-line', label: 'Local & Long Distance' },
+                { icon: 'ri-shield-check-line', label: 'Careful Item Handling' },
+                { icon: 'ri-star-fill', label: 'Customer-Focused Service' },
+                { icon: 'ri-archive-line', label: 'Packing & Loading Help' },
+                { icon: 'ri-road-map-line', label: 'Local Moving Support' },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-2">
                   <div className="w-5 h-5 flex items-center justify-center">

@@ -11,10 +11,10 @@
   "long_distance_moving": {
     "title": "Long Distance Moving",
     "subtitle": "Florida & Beyond",
-    "description": "Reliable long distance moves across Florida and beyond. Flat-rate quotes, insured transport, GPS-tracked trucks, on-time guaranteed delivery.",
+    "description": "Longer-distance moving support can be discussed through the quote form. Share pickup and delivery details so the team can confirm availability and next steps.",
     "image": "",
     "image_alt": "Long distance moving truck prepared for transport",
-    "features": ["Flat-rate pricing", "GPS-tracked trucks", "Fully insured transport"],
+    "features": ["Quote-based planning", "Route details reviewed", "Availability confirmed by team"],
     "cta_button": "Get a Free Quote"
   },
   "moving_service": {

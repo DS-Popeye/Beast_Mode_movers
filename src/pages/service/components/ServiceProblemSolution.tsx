@@ -14,7 +14,7 @@ export default function ServiceProblemSolution() {
                 'Hidden fees discovered only on moving day',
                 'Movers who show up late — or not at all',
                 'Damaged furniture and broken belongings',
-                'Unlicensed crews with no accountability',
+                'Unclear crews with limited move details',
                 'Vague quotes with no real transparency',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -38,7 +38,7 @@ export default function ServiceProblemSolution() {
                 'Flat, transparent quotes — no surprises on move day',
                 'On-time arrival guaranteed or we make it right',
                 'Every item padded, wrapped, and fully protected',
-                'Florida-licensed and fully insured crew',
+                'Move scope reviewed before scheduling',
                 'Same-day availability for urgent local moves',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">

@@ -1,8 +1,8 @@
 const reasons = [
   {
     icon: 'ri-shield-star-line',
-    title: 'Fully Licensed & Insured',
-    desc: 'Your belongings are protected from pickup to delivery. We carry all required Florida moving licenses and complete insurance coverage.',
+    title: 'Careful Moving Support',
+    desc: 'Customers can request help with planning, loading, unloading, and item handling based on the needs of the move.',
   },
   {
     icon: 'ri-music-2-line',
@@ -62,8 +62,8 @@ export default function WhyChooseUs() {
 
             {/* Floating rating badge */}
             <div className="absolute top-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-xl">
-              <p className="font-bebas text-5xl text-[#70DC28] leading-none">5★</p>
-              <p className="text-white font-semibold text-sm mt-1">Rated Movers</p>
+              <p className="font-bebas text-4xl text-[#70DC28] leading-none">QUOTE</p>
+              <p className="text-white font-semibold text-sm mt-1">Quote Requests</p>
               <p className="text-white/50 text-xs">Brevard County, FL</p>
             </div>
           </div>

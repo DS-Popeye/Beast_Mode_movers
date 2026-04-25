@@ -19,7 +19,7 @@ export default function AboutHero() {
               <span className="block text-[2.5rem] lg:text-[3.5rem] text-white/80">COMPANY</span>
             </h1>
             <p className="text-white/70 text-base leading-relaxed max-w-lg mb-8">
-              Beast Mode Movers was built on one simple belief: moving should be stress-free. We&apos;re a locally owned, fully licensed and insured moving company serving all of Brevard County, FL.
+              Beast Mode Movers was built on one simple belief: moving should be easier to plan. The team helps customers request support for home, apartment, business, packing, loading, and local moves.
             </p>
             <Link
               to="/#contact"

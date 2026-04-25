@@ -9,6 +9,7 @@ import LeadForm from '../home/components/LeadForm';
 import FloatingCTA from '../home/components/FloatingCTA';
 import ServiceHero from './components/ServiceHero';
 import ServiceBreakdown from './components/ServiceBreakdown';
+import ServiceContentSections from './components/ServiceContentSections';
 import ServiceBenefits from './components/ServiceBenefits';
 import ServiceProblemSolution from './components/ServiceProblemSolution';
 import ServiceProcess from './components/ServiceProcess';
@@ -23,6 +24,7 @@ export default function ServicePage() {
       <InnerHeader />
       <ServiceHero />
       <TrustBar />
+      <ServiceContentSections />
       <ServiceBreakdown />
       <ServiceBenefits />
       <ServiceProblemSolution />

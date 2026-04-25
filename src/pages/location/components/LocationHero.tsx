@@ -19,7 +19,7 @@ export default function LocationHero() {
               <span className="block text-[2.5rem] lg:text-[3.5rem] text-white/80">TRUSTED. LOCAL. 5-STAR.</span>
             </h1>
             <p className="text-white/70 text-base leading-relaxed max-w-lg mb-8">
-              Beast Mode Movers is Melbourne&apos;s top-rated local moving company. Licensed, insured, and built for Brevard County — serving Melbourne and surrounding communities with 5-star moving services.
+              Beast Mode Movers provides local moving support in the listed Florida service areas. Customers can request help for residential, apartment, commercial, packing, loading, furniture, and equipment moves.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/#contact" className="bg-[#70DC28] text-[#0f0f0f] px-8 py-4 rounded-md font-black text-sm text-center whitespace-nowrap hover:bg-[#58C016] transition-colors cursor-pointer">
@@ -31,9 +31,9 @@ export default function LocationHero() {
             </div>
             <div className="flex flex-wrap gap-5 mt-8">
               {[
-                { icon: 'ri-shield-check-line', label: 'Licensed & Insured' },
-                { icon: 'ri-star-fill', label: '5-Star Melbourne Rating' },
-                { icon: 'ri-time-line', label: 'Same-Day Available' },
+                { icon: 'ri-shield-check-line', label: 'Careful Item Handling' },
+                { icon: 'ri-star-fill', label: 'Customer-Focused Service' },
+                { icon: 'ri-time-line', label: 'Availability by Quote' },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-2">
                   <div className="w-5 h-5 flex items-center justify-center">

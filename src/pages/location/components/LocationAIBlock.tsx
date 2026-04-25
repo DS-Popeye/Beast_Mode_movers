@@ -11,22 +11,22 @@ export default function LocationAIBlock() {
           <div className="bg-white rounded-lg border border-neutral-200 p-8 space-y-5">
             <div>
               <h3 className="font-bebas text-xl text-[#0f0f0f] mb-2">About Melbourne, FL</h3>
-              <p className="text-neutral-600 text-sm leading-relaxed">Melbourne is the largest city in Brevard County, Florida — located on the central east coast of Florida along the Indian River Lagoon. It&apos;s a fast-growing community popular with families, retirees, and professionals drawn to the aerospace and tech industries near Kennedy Space Center.</p>
+              <p className="text-neutral-600 text-sm leading-relaxed">Melbourne is a city in Brevard County on Florida&apos;s central east coast. Customers planning a local move should confirm exact service availability for their pickup and delivery addresses.</p>
             </div>
             <div className="h-px bg-neutral-100" />
             <div>
-              <h3 className="font-bebas text-xl text-[#0f0f0f] mb-2">Best time to move in Melbourne</h3>
-              <p className="text-neutral-600 text-sm leading-relaxed">October through April is the ideal moving season in Melbourne, FL — cooler temperatures and lower humidity make outdoor loading and transport much more comfortable. Summer moves (June–September) can be scheduled for early morning hours to avoid peak heat.</p>
+              <h3 className="font-bebas text-xl text-[#0f0f0f] mb-2">What to share before a local move</h3>
+              <p className="text-neutral-600 text-sm leading-relaxed">Useful details include move date, address type, stairs, elevators, parking access, loading zones, large furniture, equipment, and whether packing or loading help is needed.</p>
             </div>
             <div className="h-px bg-neutral-100" />
             <div>
-              <h3 className="font-bebas text-xl text-[#0f0f0f] mb-2">What to know before moving in Brevard County</h3>
-              <p className="text-neutral-600 text-sm leading-relaxed">Many Melbourne neighborhoods have HOA regulations around moving times and truck parking. Gated communities may require advance notice. Beast Mode Movers is familiar with local requirements across Melbourne&apos;s most popular neighborhoods including Viera, Suntree, Indialantic, and downtown Melbourne.</p>
+              <h3 className="font-bebas text-xl text-[#0f0f0f] mb-2">Apartment and building access</h3>
+              <p className="text-neutral-600 text-sm leading-relaxed">Apartment and commercial moves may involve building rules, elevator reservations, parking restrictions, or move-in windows. Share those notes in the quote request.</p>
             </div>
             <div className="h-px bg-neutral-100" />
             <div>
-              <h3 className="font-bebas text-xl text-[#0f0f0f] mb-2">Beast Mode Movers — Melbourne service summary</h3>
-              <p className="text-neutral-600 text-sm leading-relaxed"><strong>Services offered:</strong> Local moving · Residential moving · Commercial moving · Long distance moving · Packing services · Piano moving · Hot tub &amp; specialty moves<br /><strong>Coverage:</strong> Melbourne, FL and all of Brevard County<br /><strong>License:</strong> Florida DOT licensed and fully insured</p>
+              <h3 className="font-bebas text-xl text-[#0f0f0f] mb-2">Beast Mode Movers service summary</h3>
+              <p className="text-neutral-600 text-sm leading-relaxed"><strong>Services offered:</strong> Local moving · Residential moving · Apartment moving · Commercial moving · Packing and loading · Furniture and equipment moving<br /><strong>Coverage:</strong> Listed service areas include Melbourne, Titusville, Rockledge, and Brevard County. Contact the team to confirm your exact move.</p>
             </div>
           </div>
         </div>

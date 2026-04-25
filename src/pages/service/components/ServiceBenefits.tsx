@@ -1,13 +1,13 @@
 const benefits = [
   {
     icon: 'ri-star-fill',
-    title: '5-Star Local Reputation',
-    desc: 'Hundreds of five-star reviews from homeowners and businesses across Brevard County. Our reputation is built on results, not promises.',
+    title: 'Local Service Focus',
+    desc: 'Customers can request moving support for the Florida service areas listed on the website and confirm exact availability with the team.',
   },
   {
     icon: 'ri-shield-check-line',
-    title: 'Fully Licensed & Insured',
-    desc: 'We are a Florida DOT licensed moving company with full liability insurance. Every move is covered — your belongings are protected.',
+    title: 'Clear Move Planning',
+    desc: 'Move details, access notes, large items, and packing needs can be shared in advance so the team understands the scope.',
   },
   {
     icon: 'ri-time-line',
